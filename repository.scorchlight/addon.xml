@@ -1,9 +1,9 @@
 <?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.scorchlight" name="ScorchLight GitHub Add-on Repository" version="1.0.0" provider-name="ScorchLight">
-	<extension point="xbmc.addon.repository" name="ScorchLight SMB Add-on Repository">
-		<info compressed="false">https://github.com/Scorch-Light/Kodi-Skins/addons.xml</info>
+	<extension point="xbmc.addon.repository" name="ScorchLight Add-on Repository">
+		<info compressed="true">https://github.com/Scorch-Light/Kodi-Skins/addons.xml</info>
 		<checksum>https://github.com/Scorch-Light/Kodi-Skins/addons.xml.md5</checksum>
-		<datadir zip="false">https://github.com/Scorch-Light/Kodi-Skins</datadir>
+		<datadir zip="true">https://github.com/Scorch-Light/Kodi-Skins</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Install Add-ons from ScorchLight GitHub Add-on Repository</summary>
