@@ -1,0 +1,14 @@
+<skin>
+	<defaultresolution>720p</defaultresolution>
+	<defaultresolutionwide>720p</defaultresolutionwide>
+	<defaultthemename>Textures.xpr</defaultthemename>
+	<version>5.3</version>
+	<effectslowdown>.75</effectslowdown>
+	<credits>
+		<skinname>ScorchLight-Touch</skinname>
+		<name>Coded</name>
+		<name>Graphics </name>
+		<name>XBOX</name>
+		<name>XBMC</name>
+	</credits>
+</skin>

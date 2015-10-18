@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<left>0</left>
+		<top>0</top>
+		<texture>-</texture>
+		<colorkey>0</colorkey>
+	</default>
+	<default type="label">
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>unfocus</disabledcolor>
+	</default>
+	<default type="fadelabel">
+		<left>80</left>
+		<top>60</top>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>unfocus</disabledcolor>
+	</default>
+	<default type="button">
+		<width>300</width>
+		<height>42</height>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<font>font13</font>
+		<textcolor>unfocus2</textcolor>
+		<disabledcolor>unfocus</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="togglebutton">
+		<left>140</left>
+		<top>167</top>
+		<width>20</width>
+		<height>20</height>
+		<texturefocus>scroll-up-focus.png</texturefocus>
+		<texturenofocus>scroll-up.png</texturenofocus>
+		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
+		<alttexturenofocus>scroll-down.png</alttexturenofocus>
+		<textcolor>text</textcolor>
+		<label>-</label>
+		<font>font13</font>
+		<disabledcolor>unfocus</disabledcolor>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="textbox">
+		<left>220</left>
+		<top>220</top>
+		<width>410</width>
+		<height>215</height>
+		<align>left</align>
+		<textcolor>text</textcolor>
+		<font>font13</font>
+	</default>
+	<default type="progress">
+		<posx>100</posx>
+		<posy>325</posy>
+		<texturebg border="16,0,16,0">OSDProgressBack.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture border="16,0,16,0">OSDProgressMid.png</midtexture>
+		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
+		<reveal>true</reveal>
+	</default>
+	<default type="spincontrol">
+		<left>330</left>
+		<top>126</top>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.png</textureupfocus>
+		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+		<align>right</align>
+		<width>32</width>
+		<height>32</height>
+		<font>font13</font>
+		<reverse>yes</reverse>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>-5</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<left>530</left>
+		<top>160</top>
+		<width>300</width>
+		<height>42</height>
+		<spinwidth>32</spinwidth>
+		<spinheight>32</spinheight>
+		<texturefocus>button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>scroll-up.png</textureup>
+		<texturedown>scroll-down.png</texturedown>
+		<textureupfocus>scroll-up-focus.png</textureupfocus>
+		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<posx>300</posx>
+		<posy>200</posy>
+		<width>300</width>
+		<height>42</height>
+		<radiowidth>90</radiowidth>
+		<radioheight>45</radioheight>
+		<textureradioonfocus>radiobutton-on.png</textureradioonfocus>
+		<textureradioonnofocus>radiobutton-on.png</textureradioonnofocus>
+		<textureradioofffocus>radiobutton-off.png</textureradioofffocus>
+		<textureradiooffnofocus>radiobutton-off.png</textureradiooffnofocus>
+		<texturefocus>button-focus.png</texturefocus>
+		<texturenofocus>button-nofocus.png</texturenofocus>
+		<label>215</label>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+	<default type="selectbutton">
+		<left>490</left>
+		<top>335</top>
+		<width>300</width>
+		<height>50</height>
+		<label>-</label>
+		<font>font12</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturebg>button-focus.png</texturebg>
+		<textureleft>scroll-left.png</textureleft>
+		<textureleftfocus>scroll-left-focus.png</textureleftfocus>
+		<textureright>scroll-right.png</textureright>
+		<texturerightfocus>scroll-right-focus.png</texturerightfocus>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<aligny>center</aligny>
+	</default>
+	<default type="slider">
+		<controloffsetx>75</controloffsetx>
+		<controloffsety>0</controloffsety>
+	</default>
+	<default type="sliderex">
+		<height>35</height>
+		<textoffsetx>10</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<sliderwidth>250</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+		<font>font12</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+	</default>
+	<default type="mover">
+		<left>60</left>
+		<top>192</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="resize">
+		<left>60</left>
+		<top>192</top>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+	</default>
+	<default type="edit">
+		<left>300</left>
+		<top>200</top>
+		<width>300</width>
+		<height>42</height>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<font>font13</font>
+		<textcolor>text</textcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
+</includes>

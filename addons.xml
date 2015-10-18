@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="repository.scorchlight" name="ScorchLight GitHub Add-on Repository" version="1.0.0" provider-name="ScorchLight">
+	<extension point="xbmc.addon.repository" name="ScorchLight SMB Add-on Repository">
+		<info compressed="false">smb://LEVERO634-PC/Project Data/KODI/Addons/addons.xml</info>
+		<checksum>smb://LEVERO634-PC/Project Data/KODI/Addons/addons.xml.md5</checksum>
+		<datadir zip="false">smb://LEVERO634-PC/Project Data/KODI/Addons/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Add-ons from ScorchLight SMB Add-on Repository</summary>
+		<description>SMB plug-ins for KODI</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon
+  id="skin.scorchlight-storm"
+  version="0.4.0"
+  name="Scorchlight-Storm"
+  provider-name="ScorchLight">
+  <requires>
+    <import addon="xbmc.gui" version="5.4.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Skin by ScorchLight with Alternate Home Screen Layouts and Touch Optimisations</summary>
+    <description lang="en">A skin designed for Touch Screens and In-Car Entertainment With an Alternate Home Screen layout for Non-touch Screens</description>
+    <disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+</addons>

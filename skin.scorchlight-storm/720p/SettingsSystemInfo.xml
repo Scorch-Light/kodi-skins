@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
+			</animation>
+			<control type="grouplist" id="9000">
+				<left>10</left>
+				<top>80</top>
+				<width>250</width>
+				<height>481</height>
+				<itemgap>-1</itemgap>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<control type="button" id="95">
+					<description>Button Summary Values</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+					<texturefocus border="5" >Back2.png</texturefocus>
+					<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>20037</label>
+				</control>
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>13277</label>
+				</control>
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>13279</label>
+				</control>
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>13280</label>
+				</control>
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>13281</label>
+				</control>
+				<control type="button" id="99">
+					<description>Button PVR</description>
+					<height>60</height>
+					<width>250</width>
+					<textoffsetx>10</textoffsetx>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font35_title</font>
+					<textcolor>unfocus</textcolor>
+					<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>19191</label>
+				</control>
+			</control>
+			<control type="image">
+				<left>268</left>
+				<top>80</top>
+				<width>992</width>
+				<height>520</height>
+				<texture border="5" >Back.png</texture>
+			</control>
+			<control type="group">
+				<left>290</left>
+				<top>90</top>
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<left>0</left>
+					<top>0</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<left>0</left>
+					<top>40</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<left>0</left>
+					<top>80</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<left>0</left>
+					<top>120</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<left>0</left>
+					<top>160</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<left>0</left>
+					<top>200</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<left>0</left>
+					<top>240</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<left>0</left>
+					<top>280</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<left>0</left>
+					<top>320</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<left>0</left>
+					<top>360</top>
+					<width>970</width>
+					<label>-</label>
+					<font>font35_title</font>
+				</control>
+				<control type="label" id="52">
+					<description>Kodi Build Version</description>
+					<left>0</left>
+					<top>400</top>
+					<width>950</width>
+					<label>144</label>
+					<align>right</align>
+					<textcolor>highlight</textcolor>
+					<shadowcolor>darktext</shadowcolor>
+					<font>font13_title</font>
+				</control>
+				<control type="label">
+					<description>CPU Text</description>
+					<left>70</left>
+					<top>430</top>
+					<width>350</width>
+					<height>25</height>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>text</textcolor>
+					<shadowcolor>darktext</shadowcolor>
+					<font>font12_title</font>
+				</control>
+				<control type="progress">
+					<description>CPU BAR</description>
+					<left>430</left>
+					<top>435</top>
+					<width>520</width>
+					<height>16</height>
+					<info>System.CPUUsage</info>
+				</control>
+				<control type="label">
+					<description>Memory Text</description>
+					<left>70</left>
+					<top>460</top>
+					<width>350</width>
+					<height>25</height>
+					<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>text</textcolor>
+					<shadowcolor>darktext</shadowcolor>
+					<font>font12_title</font>
+				</control>
+				<control type="progress">
+					<description>Memory BAR</description>
+					<left>430</left>
+					<top>465</top>
+					<width>520</width>
+					<height>16</height>
+					<info>system.memory(used)</info>
+				</control>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\sysinfo.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[130]</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,136 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="image">
+			<posx>45</posx>
+			<posy>303</posy>
+			<width>410</width>
+			<height>114</height>
+			<texture border="25">Back.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>345</posx>
+			<posy>308</posy>
+			<width>100</width>
+			<height>104</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+			<aspectratio align="right">keep</aspectratio>
+		</control>
+
+		<control type="group">
+		<include>HomeSlideAnimations</include>
+		<include>DialogZoomInOutAnimation</include>
+		<posx>45</posx>
+		<posy>0</posy>
+		<control type="wraplist" id="52">
+			<description>Profiles Area</description>
+			<posx>20</posx>
+			<posy>75</posy>
+			<width>360</width>
+			<height>570</height>
+			<focusposition>2</focusposition>
+			<onleft>1002</onleft>
+			<onright>1002</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<scrolltime>300</scrolltime>
+			<itemlayout height="114">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>114</height>
+					<font>font35_title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>text</textcolor>
+					<shadowcolor>darktext</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Label]</label>
+					<animation reversible="false" effect="fade" start="0" end="100" time="30">focus</animation>
+					<animation reversible="false" effect="fade" start="100" end="0" time="30">unfocus</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="114" width="360">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>250</width>
+					<height>114</height>
+					<font>font35_title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>text</textcolor>
+					<shadowcolor>darktext</shadowcolor>
+					<selectedcolor>text</selectedcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+   </control>
+
+		<control type="label">
+			<posx>25</posx>
+			<posy>25</posy>
+			<height>50</height>
+			<include>HomeSlideAnimations</include>
+			<width>1230</width>
+			<font>font35_title</font>
+			<textcolor>text</textcolor>
+			<shadowcolor>99000000</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<scroll>false</scroll>
+			<label>$LOCALIZE[31421]: $INFO[Container(52).ListItem.Label] </label>
+		</control>
+
+		<control type="group" id="1000">
+			<left>20</left>
+			<top>80r</top>
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<left>-20</left>
+				<top>100r</top>
+				<width>1280</width>
+				<height>100</height>
+				<texture>floor.png</texture>
+			</control>
+			<control type="button" id="1002">
+				<description>Power push button</description>
+				<left>0</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+			</control>
+			<control type="image">
+				<description>Power Icon</description>
+				<left>0</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icons\power.png</texture>
+			</control>
+		</control>
+		<include>LargeClockDate</include>
+	</controls>
+</window>

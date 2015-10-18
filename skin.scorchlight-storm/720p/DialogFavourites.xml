@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>40</left>
+		<top>40</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1200</width>
+				<height>640</height>
+				<texture border="5" >Back.png</texture>
+			</control>
+			<include>close</include>
+			<control type="panel" id="450">
+				<left>20</left>
+				<top>20</top>
+				<width>1160</width>
+				<height>600</height>
+				<onup>450</onup>
+				<onleft>Dialog.Close(Favourites)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<itemgap></itemgap>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="200" width="200">
+					<control type="image">
+						<width>200</width>
+						<height>200</height>
+						<aspectratio align="center" >keep</aspectratio>
+						<bordertexture border="5" >button-focus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture fallback="DefaultMusicTop100.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>160</top>
+						<width>200</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="200" width="200">
+					<control type="image">
+						<width>200</width>
+						<height>200</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<aspectratio align="center" >keep</aspectratio>
+						<bordertexture border="5" >button-nofocus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture fallback="DefaultMusicTop100.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<width>200</width>
+						<height>200</height>
+						<visible>Control.HasFocus(450)</visible>
+						<aspectratio align="center" >keep</aspectratio>
+						<bordertexture border="5" >button-focus.png</bordertexture>
+						<bordersize>5</bordersize>
+						<texture fallback="DefaultMusicTop100.png">$INFO[ListItem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<top>160</top>
+						<width>200</width>
+						<height>40</height>
+						<font>font12_title</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<description>Page label</description>
+				<right>65</right>
+				<top>655</top>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>unfocus</textcolor>
+				<label>([COLOR=blue]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+			</control>
+		</control>
+	</controls>
+</window>

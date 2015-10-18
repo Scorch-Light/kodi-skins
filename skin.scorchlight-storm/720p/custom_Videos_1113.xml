@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1113" type="window">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<include>CommonPageCount</include>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\film.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[3]</label>
+			</control>
+		</control>
+		<control type="panel" id="50">
+			<right>40</right>
+			<top>80</top>
+			<width>500</width>
+			<height>500</height>
+			<onleft>9003</onleft>
+			<onright>9003</onright>
+			<onup>9000</onup>
+			<ondown>1001</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<itemlayout height="100" width="500">
+				<control type="image">
+					<description>Back</description>
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>90</height>
+					<texture border="5">Back.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>unfocus</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="100" width="500">
+				<control type="image">
+					<description>Back</description>
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>90</height>
+					<texture border="5">Back.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>unfocus</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>highlight</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>Control.HasFocus(50)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</focusedlayout>			<content>
+
+				<item id="2">
+					<label>342</label>
+					<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+					<icon>-</icon>
+					<thumb>-</thumb>
+					<visible>Library.HasContent(Movies)</visible>
+				</item>
+				<item id="4">
+					<label>38000</label>
+					<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+					<visible>Library.HasContent(MovieSets)</visible>
+					<visible>Library.HasContent(Movies)</visible>
+				</item>
+
+				<item id="5">
+					<label>20343</label>
+					<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+					<icon>-</icon>
+					<thumb>-</thumb>
+					<visible>Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="1">
+					<label>744</label>
+					<onclick>ActivateWindow(Videos,Files,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+				</item>
+
+
+			</content>
+		</control>
+		<include>HomeRecentlyAddedInfo</include>
+		<include>Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image" id="999">
+			<description>background image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>380</width>
+			<height>720</height>
+			<texture border="5">Back.png</texture>
+		</control>
+		<control type="grouplist" id="996">
+			<description>grouplist for context buttons</description>
+			<left>20</left>
+			<top>20</top>
+			<width>340</width>
+			<height max="670">auto</height>
+			<itemgap>2</itemgap>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<left>-</left>
+			<top>-</top>
+			<width>340</width>
+			<height>40</height>
+			<font>font35_title</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>unfocus</textcolor>
+			<focusedcolor>focus</focusedcolor>
+			<texturefocus border="5">button-focus.png</texturefocus>
+		</control>
+		
+		<include>close</include>
+	</controls>
+</window>

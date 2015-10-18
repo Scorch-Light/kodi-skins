@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
+			</animation>
+
+			<control type="panel" id="50">
+				<left>40</left>
+				<top>80</top>
+				<width>1240</width>
+				<height>500</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="80" width="620">
+					<control type="image">
+						<description>Back</description>
+						<left>0</left>
+						<top>0</top>
+						<width>580</width>
+						<height>75</height>
+						<texture border="5">Back.png</texture>
+					</control>
+					<control type="image">
+						<description>icon</description>
+						<left>0</left>
+						<top>0</top>
+						<width>100</width>
+						<height>75</height>	
+						<aspectratio>keep</aspectratio>
+						<texture >$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>0</top>
+						<width>480</width>
+						<height>75</height>
+						<font>font_MainMenu</font>
+						<textcolor>unfocus</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="620">
+					<control type="image">
+						<description>Back</description>
+						<left>0</left>
+						<top>0</top>
+						<width>580</width>
+						<height>75</height>
+						<texture border="5">button-focus.png</texture>
+					</control>
+					<control type="image">
+						<description>icon</description>
+						<left>0</left>
+						<top>0</top>
+						<width>100</width>
+						<height>75</height>	
+						<aspectratio>keep</aspectratio>
+						<texture >$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>0</top>
+						<width>480</width>
+						<height>75</height>
+						<font>font_MainMenu</font>
+						<textcolor>focus</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>480</label>
+						<label2>31400</label2>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<icon>icons\eye.png</icon>
+					</item>
+					<item id="11">
+						<label>20077</label>
+						<label2></label2>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
+						<icon>icons\eye.png</icon>
+					</item>
+					<item id="2">
+						<label>157</label>
+						<label2>31401</label2>
+						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<icon>icons\film.png</icon>
+					</item>
+					<item id="3">
+						<label>31502</label>
+						<label2>31409</label2>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<icon>icons\livetv.png</icon>
+					</item>
+					<item id="4">
+						<label>2</label>
+						<label2>31402</label2>
+						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<icon>icons\songs.png</icon>
+					</item>
+					<item id="5">
+						<label>1</label>
+						<label2>31403</label2>
+						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<icon>icons\pictures.png</icon>
+					</item>
+					<item id="6">
+						<label>8</label>
+						<label2>31404</label2>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+						<icon>icons\sun.png</icon>
+					</item>
+					<item id="7">
+						<label>24001</label>
+						<label2>31408</label2>
+						<onclick>ActivateWindow(AddonBrowser)</onclick>
+						<icon>icons\addons.png</icon>
+					</item>
+					<item id="8">
+						<label>14036</label>
+						<label2>31410</label2>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+						<icon>icons\network.png</icon>
+					</item>
+					<item id="9">
+						<label>13000</label>
+						<label2>31406</label2>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>icons\sysinfo.png</icon>
+					</item>
+					<item id="12">
+						<label>OpenElec</label>
+						<onclick>RunAddon(service.openelec.settings)</onclick>
+						<icon>icons\openelec.png</icon>
+						<visible>System.HasAddon(service.openelec.settings)</visible>
+						<thumb>-</thumb>
+					</item>
+					<item id="10">
+						<label>13200</label>
+						<label2>-</label2>
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<icon>icons\artist.png</icon>
+					</item>
+					
+				</content>
+			</control>
+
+
+			<control type="textbox">
+				<description>Appearance Description</description>
+				<left>25</left>
+				<top>575</top>
+				<width>1230</width>
+				<height>25</height>
+				<label>$INFO[Container(50).ListItem.Label2]</label>
+				<align>center</align>
+				<textcolor>text</textcolor>
+				<shadowcolor>darktext</shadowcolor>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\settings.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[5]</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

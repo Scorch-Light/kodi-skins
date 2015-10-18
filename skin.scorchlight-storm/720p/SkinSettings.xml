@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+
+		<include>ContentPanelBackgrounds</include>
+
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\eye.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[20077]</label>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>[COLOR=blue] - [/COLOR]$INFO[Container(9000).ListItem.Label]</label>
+			</control>
+		</control>
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
+			</animation>
+
+			<control type="list" id="9000">
+				<left>10</left>
+				<top>80</top>
+				<width>260</width>
+				<height>481</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="80" width="250">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>250</width>
+						<height>81</height>
+						<texture  border="5" >Back.png</texture>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>15</top>
+						<width>240</width>
+						<height>25</height>
+						<font>font24_title</font>
+						<textcolor>unfocus</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>42</top>
+						<width>240</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="250">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>250</width>
+						<height>81</height>
+						<texture border="5" >Back2.png</texture>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>15</top>
+						<width>240</width>
+						<height>25</height>
+						<font>font24_title</font>
+						<textcolor>darktext</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>42</top>
+						<width>240</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>darktext</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>128</label>
+						<label2>5</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="2">
+						<label>513</label>
+						<label2>31112</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>31102</label>
+						<label2>31112</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>24000</label>
+						<label2>31200</label2>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="group" id="9010">
+				<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<left>268</left>
+					<top>80</top>
+					<width>970</width>
+					<height>540</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="radiobutton" id="101">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>20189</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+						<selected>Skin.HasSetting(AutoScroll)</selected>
+					</control>
+					<control type="radiobutton" id="102">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31103</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Permanently Show Info In Visulisation</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(FullInfo)</onclick>
+						<selected>Skin.HasSetting(FullInfo)</selected>
+					</control>
+					<control type="radiobutton" id="112">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31104</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(WindowedTrailer)</onclick>
+						<selected>!Skin.HasSetting(WindowedTrailer)</selected>
+					</control>
+					<control type="radiobutton" id="113">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31107</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
+						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
+					</control>
+					<control type="radiobutton" id="115">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31126</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(ActivateTvTunes)</onclick>
+						<selected>Skin.HasSetting(ActivateTvTunes)</selected>
+						<visible>System.HasAddon(script.tvtunes)</visible>
+					</control>
+					<control type="radiobutton" id="107">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>21398</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+					</control>
+					<control type="button" id="108">
+						<description>Startup Playlist Path</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>15311</label>
+						<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+						<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					</control>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1240</left>
+					<top>80</top>
+					<width>20</width>
+					<height>500</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9001</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(1)</visible>
+				</control>
+				<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
+					<left>268</left>
+					<top>80</top>
+					<width>970</width>
+					<height>540</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<control type="radiobutton" id="201">
+						<description>Switch Home Views</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>Alternative Home View</label>
+						<onclick>Skin.ToggleSetting(AltHomeView)</onclick>
+						<selected>Skin.HasSetting(AltHomeView)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>					
+					<control type="radiobutton" id="202">
+						<description>enable video info</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>20176</label>
+						<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
+						<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="203">
+						<description>enable music info</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>20083</label>
+						<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
+						<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="204">
+						<description>enable weather info</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>20084</label>
+						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+						<selected>Skin.HasSetting(homepageWeatherinfo)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<visible>!IsEmpty(Weather.Plugin)</visible>
+					</control>
+					<control type="radiobutton" id="205">
+						<description>Show Recently added Video info</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>31117</label>
+						<onclick>Skin.ToggleSetting(HomepageHideRecentlyAddedVideo)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideRecentlyAddedVideo)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="206">
+						<description>Show Recently added info</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>31116</label>
+						<onclick>Skin.ToggleSetting(HomepageHideRecentlyAddedAlbums)</onclick>
+						<selected>!Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control> 
+					<control type="radiobutton" id="221">
+						<description>Hide Videos Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[3]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+<!--					<control type="radiobutton" id="222">
+						<description>Hide Movies Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[20342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMovieButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMovieButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<enable>Library.HasContent(Movies)</enable>
+					</control>
+					<control type="radiobutton" id="223">
+						<description>Hide TV Shows Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<enable>Library.HasContent(TVShows)</enable>
+					</control> -->
+					<control type="radiobutton" id="224">
+						<description>Hide Music Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+<!--					<control type="radiobutton" id="224">
+						<description>Hide MusicVideos Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[20389]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideosButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoMusicVideosButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control> -->
+					<control type="radiobutton" id="225">
+						<description>Hide Pictures Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="226">
+						<description>Hide Programs Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="228">
+						<description>Hide Weather Button</description>
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+					</control>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1240</left>
+					<top>80</top>
+					<width>20</width>
+					<height>500</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9002</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(2)</visible>
+				</control>
+				<control type="grouplist" id="9003">
+					<visible>Container(9000).Hasfocus(3)</visible>
+					<left>268</left>
+					<top>80</top>
+					<width>970</width>
+					<height>540</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<control type="radiobutton" id="301">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31119</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
+						<selected>Skin.HasSetting(HideBackGroundFanart)</selected>
+					</control>
+					<control type="radiobutton" id="302">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31129</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
+						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
+					</control>
+					<control type="radiobutton" id="303">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31124</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
+						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
+					</control>
+					<control type="radiobutton" id="304">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31125</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
+						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
+					</control>
+					<control type="radiobutton" id="311">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31109</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
+						<selected>Skin.HasSetting(UseCustomBackground)</selected>
+					</control>
+					<control type="button" id="312">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>- $LOCALIZE[31110]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+						<enable>Skin.HasSetting(UseCustomBackground)</enable>
+					</control>
+				</control>
+				<control type="group">
+					<control type="grouplist" id="9004">
+						<visible>Container(9000).Hasfocus(4)</visible>
+						<left>268</left>
+						<top>80</top>
+						<width>970</width>
+						<height>540</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<control type="button" id="455">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>$LOCALIZE[31132]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+						</control>
+						<control type="button" id="456">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>- $LOCALIZE[24020]</label>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<enable>!IsEmpty(Skin.String(LyricScript_Path))</enable>
+							<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
+						</control>
+						<control type="button" id="441">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>$LOCALIZE[24000] [B]1[/B]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton1))][/COLOR]</label2>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<onclick>Skin.SetAddon(HomeProgramButton1,xbmc.addon.video, xbmc.addon.audio, xbmc.addon.image, xbmc.addon.executable)</onclick>
+						</control>
+						<control type="button" id="442">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>$LOCALIZE[24000] [B]2[/B]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton2))][/COLOR]</label2>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<onclick>Skin.SetAddon(HomeProgramButton2,xbmc.addon.video, xbmc.addon.audio, xbmc.addon.image, xbmc.addon.executable)</onclick>
+						</control>
+						<control type="button" id="443">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>$LOCALIZE[24000] [B]3[/B]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton3))][/COLOR]</label2>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<onclick>Skin.SetAddon(HomeProgramButton3,xbmc.addon.video, xbmc.addon.audio, xbmc.addon.image, xbmc.addon.executable)</onclick>
+						</control>
+						<control type="button" id="444">
+							<width>970</width>
+							<height>60</height>
+							<font>font13</font>
+							<label>$LOCALIZE[24000] [B]4[/B]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeProgramButton4))][/COLOR]</label2>
+							<textcolor>unfocus</textcolor>
+							<focusedcolor>darktext</focusedcolor>
+							<texturefocus border="5" >Back2.png</texturefocus>
+							<texturenofocus border="5" >Back.png</texturenofocus>
+							<onclick>Skin.SetAddon(HomeProgramButton4,xbmc.addon.video, xbmc.addon.audio, xbmc.addon.image, xbmc.addon.executable)</onclick>
+						</control>
+						
+						
+					</control>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>1240</left>
+					<top>80</top>
+					<width>20</width>
+					<height>500</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9004</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(4)</visible>
+				</control>
+			</control>
+		</control>
+
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<include>Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1114" type="window">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<include>CommonPageCount</include>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\songs.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[10516]</label>
+			</control>
+		</control>
+		<control type="panel" id="50">
+			<right>40</right>
+			<top>80</top>
+			<width>500</width>
+			<height>540</height>
+			<onleft>9003</onleft>
+			<onright>9003</onright>
+			<onup>9000</onup>
+			<ondown>1000</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<itemlayout height="75" width="500">
+				<control type="image">
+					<description>Back</description>
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>70</height>
+					<texture border="5">Back.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>75</height>
+					<font>font_MainMenu</font>
+					<textcolor>unfocus</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75" width="500">
+				<control type="image">
+					<description>Back</description>
+					<left>0</left>
+					<top>5</top>
+					<width>500</width>
+					<height>70</height>
+					<texture border="5">Back.png</texture>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>75</height>
+					<font>font_MainMenu</font>
+					<textcolor>unfocus</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>75</height>
+					<font>font_MainMenu</font>
+					<textcolor>highlight</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>Control.HasFocus(50)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="90116">
+					<label>14022</label>
+					<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</item>
+				<item id="90112">
+					<label>133</label>
+					<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</item>
+				<item id="90113">
+					<label>132</label>
+					<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</item>
+				<item id="90114">
+					<label>134</label>
+					<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+					<visible>Library.HasContent(Music)</visible>
+				</item>
+
+				<item id="14">
+					<label>20389</label>
+					<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+					<visible>Library.HasContent(MusicVideos)</visible>
+					<icon>-</icon>
+					<thumb>-</thumb>
+				</item>
+				<item id="90119">
+					<description>PartyMode</description>
+					<label>589</label>
+					<onclick>PlayerControl(Partymode)</onclick>
+				</item>
+				<item id="90115">
+					<label>744</label>
+					<onclick>ActivateWindow(MusicFiles)</onclick>
+				</item>
+
+			</content>
+		</control>
+		<include>HomeRecentlyAddedInfo</include>
+		<include>Clock</include>
+	</controls>
+</window>

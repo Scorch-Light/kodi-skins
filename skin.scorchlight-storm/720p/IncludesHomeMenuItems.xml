@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ButtonHomeSubCommonValues">
+		<height>50</height>
+		<width>280</width>
+		<textwidth>195</textwidth>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<textcolor>unfocus</textcolor>
+		<focusedcolor>text</focusedcolor>
+		<texturefocus border="25">SubMenuBack-MiddleFO.png</texturefocus>
+		<texturenofocus border="25">SubMenuBack-MiddleNF.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="HomeSubMenuCommonValues">
+		<left>500</left>
+		<top>0</top>
+		<width>280</width>
+		<height>720</height>
+		<align>center</align>
+		<aligny>middle</aligny>
+		<onup>9000</onup>
+		<ondown>1000</ondown>
+		<itemgap>0</itemgap>
+		<orientation>Vertical</orientation>
+		<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+	</include>
+
+	<include name="HomeSubMenuVideos">
+		<control type="image" id="90101">
+<width>280</width> <height>32</height> 
+			<texture border="25">SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90102">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>342</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</control>
+		<control type="button" id="90103">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20343</label>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</control>
+		<control type="button" id="90104">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20389</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+			<visible>Library.HasContent(MusicVideos) + Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+		<control type="button" id="90106">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video)</visible>
+		</control>
+		<control type="button" id="90107">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="togglebutton" id="20">
+			<description>Update library</description>
+			<include>ButtonHomeSubCommonValues</include>
+			<onclick>UpdateLibrary(video)</onclick>
+			<label>653</label>
+			<altlabel>13353</altlabel>
+			<usealttexture>library.isscanningvideo</usealttexture>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90108">
+<width>280</width> <height>32</height>
+			<texture border="25" flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMovies">
+		<control type="image" id="90161">
+<width>280</width> <height>32</height>
+			<texture border="25">SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+		</control>
+		<control type="button" id="90163">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+			<visible>Library.HasContent(MovieSets)</visible>
+		</control>
+		<control type="button" id="90164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+		</control>
+		<control type="button" id="90165">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+		</control>
+		<control type="button" id="90166">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
+		</control>
+		<control type="button" id="90167">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90168">
+<width>280</width> <height>32</height>
+			<texture border="25" flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuTVShows">
+		<control type="image" id="90171">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90172">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+		</control>
+		<control type="button" id="90173">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+		</control>
+		<control type="button" id="90174">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
+		</control>
+		<control type="button" id="90175">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
+		</control>
+		<control type="button" id="90176">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90177">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMusic">
+		<control type="image" id="90111">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90112">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>133</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90113">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>132</label>
+			<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90114">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>134</label>
+			<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90115">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(MusicFiles)</onclick>
+		</control>
+		<control type="button" id="90116">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<visible>Library.HasContent(Music)</visible>
+		</control>
+		<control type="button" id="90118">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<visible>!Library.HasContent(Music)</visible>
+		</control>
+		<control  type="button" id="90119">
+			<description>PartyMode</description>
+			<label>589</label>
+			<include>ButtonHomeSubCommonValues</include>
+			<onclick>PlayerControl(Partymode)</onclick>
+		</control>
+		<control type="togglebutton" id="20">
+			<description>Update library</description>
+			<include>ButtonHomeSubCommonValues</include>
+			<onclick>UpdateLibrary(video)</onclick>
+			<label>653</label>
+			<altlabel>13353</altlabel>
+			<usealttexture>library.isscanningvideo</usealttexture>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90120">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuSystem">
+		<control type="image" id="90121">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90122">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>5</label>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90124">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90125">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90126">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPlayDisc">
+		<control type="image" id="90131">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90132">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13391</label>
+			<onclick>SetFocus(9000)</onclick>
+			<onclick>EjectTray()</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90126">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPictures">
+		<control type="image" id="90147">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90149">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuTV">
+		<control type="image" id="90141">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90143">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19019</label>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+		</control>
+		<control type="button" id="90144">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19069</label>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+		</control>
+		<control type="button" id="90145">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+		</control>
+		<control type="button" id="90146">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+		</control>
+		<control type="button" id="90147">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>137</label>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90148">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuRadio">
+		<control type="image" id="90141">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90243">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19019</label>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+		</control>
+		<control type="button" id="90244">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19069</label>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+		</control>
+		<control type="button" id="90245">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+		</control>
+		<control type="button" id="90246">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+		</control>
+		<control type="button" id="90247">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>137</label>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+		</control>
+							<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+		<control type="image" id="90248">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuAddon">
+		<control type="image" id="90147">
+<width>280</width> <height>32</height>
+			<texture border="25" >SubMenuBack-Header.png</texture>
+		</control>
+		<control type="button" id="90101">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>3</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="button" id="90102">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>2</label>
+			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+		</control>
+		<control type="button" id="90103">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>1</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+		<control type="button" id="90104">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>0</label>
+			<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+		</control>		
+					<control type="button" id="90140">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Cancel</label>
+						<onclick>SetFocus(9000)</onclick>
+					</control>		
+		<control type="image" id="90149">
+<width>280</width> <height>32</height>
+			<texture border="25"  flipy="true">SubMenuBack-Header.png</texture>
+		</control>
+		
+	</include>
+	
+	
+	</includes>

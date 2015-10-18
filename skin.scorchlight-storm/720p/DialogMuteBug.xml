@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>-</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>0</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>65r</left>
+			<top>10</top>
+			<width>55</width>
+			<height>55</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\mute.png</texture>
+		</control>
+	</controls>
+</window>

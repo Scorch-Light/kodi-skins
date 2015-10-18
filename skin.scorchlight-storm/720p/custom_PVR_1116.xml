@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1116" type="window">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>ContentPanelBackgrounds</include>
+		<include>CommonPageCount</include>
+		<include>CommonNowPlaying</include>
+		<include>MainWindowMouseButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>-5</left>
+			<top>-15</top>
+			<width>100</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icons\livetv.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>85</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[31952] & $LOCALIZE[31960]</label>
+			</control>
+		</control>
+		<control type="panel" id="50">	
+			<left>140</left>
+				<top>215</top>
+				<width>1000</width>
+				<height>500</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>1000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="250" width="500">
+					<control type="image">
+						<description>Back</description>
+						<left>5</left>
+						<top>5</top>
+						<width>490</width>
+						<height>240</height>
+						<texture border="5">Back.png</texture>
+					</control>
+					<control type="image">
+						<description>Icon</description>
+						<left>0</left>
+						<top>0</top>
+						<width>250</width>
+						<height>250</height>
+						<aspectratio>keep</aspectratio>
+						<texture >$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<top>0</top>
+						<width>340</width>
+						<height>250</height>
+						<font>font_MainMenu</font>
+						<textcolor>unfocus</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+				</itemlayout>
+				<focusedlayout height="250" width="500">
+					<control type="image">
+						<description>Back</description>
+						<left>5</left>
+						<top>5</top>
+						<width>490</width>
+						<height>240</height>
+						<texture border="5">Back.png</texture>
+					</control>
+					<control type="image">
+						<description>Icon</description>
+						<left>0</left>
+						<top>0</top>
+						<width>250</width>
+						<height>250</height>
+						<aspectratio>keep</aspectratio>
+						<texture >$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<top>0</top>
+						<width>340</width>
+						<height>250</height>
+						<font>font_MainMenu</font>
+						<textcolor>unfocus</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<top>0</top>
+						<width>340</width>
+						<height>250</height>
+						<font>font_MainMenu</font>
+						<textcolor>highlight</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(50)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+				</focusedlayout>
+			<content>
+				<item id="13">
+					<label>31960</label>
+					<onclick>ActivateWindow(RadioChannels)</onclick>
+					<icon>icons\radio.png</icon>
+					<thumb>-</thumb>
+				</item>
+				<item id="12">
+					<label>31952</label>
+					<onclick>ActivateWindow(TVChannels)</onclick>
+					<icon>icons\livetv.png</icon>
+					<thumb>-</thumb>
+				</item>
+
+			</content>
+		</control>
+		<include>HomeRecentlyAddedInfo</include>
+		<include>Clock</include>
+	</controls>
+</window>
