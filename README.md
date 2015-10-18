@@ -1,10 +1,6 @@
-XBMC Skins By Scorch-Light
+Kodi Skins By Scorch-Light
 =====
 
-XBMC Skin: Scorch-Light Storm
-
-XBMC Skin: Scorch-Light Slide
-
-XBMC Skin: Scorch-Light Gamer
+Kodi Skin: Scorch-Light Storm
 
 Please ask before useing my code.
