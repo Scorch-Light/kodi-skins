@@ -5,30 +5,29 @@
 			<visible>Control.IsVisible(550)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="list" id="550">
-				<left>70</left>
-				<top>78</top>
-				<width>580</width>
+				<left>40</left>
+				<top>80</top>
 				<height>540</height>
+				<width>580</width>
 				<onleft>2</onleft>
 				<onright>60</onright>
-				<onup>550</onup>
-				<ondown>550</ondown>
-				<viewtype label="$LOCALIZE[31033]">info</viewtype>
-				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
+				<onup>50</onup>
+				<ondown>1000</ondown>
+				<viewtype label="$LOCALIZE[31033]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40" width="580">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<width>690</width>
+						<height>40</height>
+						<texture border="5">Back.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
-						<width>520</width>
+						<width>660</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>unfocus</textcolor>
@@ -42,7 +41,7 @@
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
-						<font>font12</font>
+						<font>font13</font>
 						<textcolor>unfocus</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
@@ -54,36 +53,28 @@
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<width>690</width>
+						<height>40</height>
+						<texture border="5">Back.png</texture>
 						<visible>!Control.HasFocus(550)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
+						<width>690</width>
+						<height>40</height>
+						<texture border="5">button-focus.png</texture>
 						<visible>Control.HasFocus(550)</visible>
 						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<left>370</left>
-						<top>5</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(550) + !IsEmpty(ListItem.Property(Addon.Status))</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
-						<width>520</width>
+						<width>660</width>
 						<height>40</height>
 						<font>font13</font>
-						<textcolor>text</textcolor>
+						<textcolor>focus</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -94,8 +85,8 @@
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>unfocus</textcolor>
+						<font>font13</font>
+						<textcolor>focus</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>

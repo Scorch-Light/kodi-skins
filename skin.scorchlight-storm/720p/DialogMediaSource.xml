@@ -26,25 +26,8 @@
 			<label>$LOCALIZE[13406]</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>selected</textcolor>
+			<textcolor>text</textcolor>
 			<shadowcolor>darktext</shadowcolor>
-		</control>
-		<control type="button">
-			<description>Close Window button</description>
-			<left>710</left>
-			<top>15</top>
-			<width>64</width>
-			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="label">
 			<description>path label</description>
@@ -71,13 +54,6 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="45">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>525</width>
-					<height>40</height>
-					<texture border="5">button-nofocus.png</texture>
-				</control>
 				<control type="label">
 					<left>10</left>
 					<top>0</top>
@@ -86,7 +62,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>darktext</textcolor>
+					<textcolor>unfocus</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -96,17 +72,9 @@
 					<left>0</left>
 					<top>0</top>
 					<width>525</width>
-					<height>40</height>
-					<visible>!Control.HasFocus(10)</visible>
-					<texture border="5">button-nofocus.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>525</width>
 					<height>41</height>
 					<visible>Control.HasFocus(10)</visible>
-					<texture border="5">button-focus2.png</texture>
+					<texture border="5">button-focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -116,7 +84,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>darktext</textcolor>
+					<textcolor>focus</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -150,8 +118,6 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>18</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -167,8 +133,6 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>11</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -184,8 +148,6 @@
 				<font>font12_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>13</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
@@ -214,10 +176,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<label>-</label>
-			<textcolor>darktext</textcolor>
+			<textcolor>text</textcolor>
 			<font>font13</font>
-			<texturefocus border="5">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<onup>10</onup>
 			<onleft>12</onleft>
 			<onright>19</onright>
@@ -234,8 +194,6 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
 				<label>186</label>
 				<font>font12_title</font>
 				<onup>12</onup>
@@ -251,8 +209,6 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
 				<label>222</label>
 				<font>font12_title</font>
 				<onup>12</onup>

@@ -3,27 +3,30 @@
 	<defaultcontrol>1</defaultcontrol>
 	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<left>920</left>
+		<top>10</top>
+	</coordinates>
 	<controls>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>350</width>
+				<height>80</height>
+				<texture border="20">Back.png</texture>
+			</control>
 		<control type="group">
-			<left>265</left>
-			<top>260</top>
 			<control type="group">
-				<control type="image">
-					<description>background image</description>
-					<left>0</left>
-					<top>0</top>
-					<width>750</width>
-					<height>200</height>
-					<texture border="5">Back.png</texture>
-				</control>
 				<visible>!player.passthrough</visible>
 				<control type="image">
 					<description>Lite Volume Logo</description>
 					<visible>!Player.Muted</visible>
 					<left>0</left>
 					<top>0</top>
-					<width>200</width>
-					<height>200</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture>icons\volume.png</texture>
 				</control>
@@ -32,8 +35,8 @@
 					<description>Lite Volume Logo</description>
 					<left>0</left>
 					<top>0</top>
-					<width>200</width>
-					<height>200</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture>icons\mute.png</texture>
 				</control>
@@ -41,17 +44,17 @@
 					<description>Lite Volume Logo</description>
 					<left>0</left>
 					<top>0</top>
-					<width>200</width>
-					<height>200</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Player.Volume,busy/,.png]</texture>
 				</control>
 				<control type="progress" id="1">
 					<description>progress control</description>
-					<left>200</left>
-					<top>75</top>
-					<width>500</width>
-					<height>50</height>
+					<left>80</left>
+					<top>25</top>
+					<width>250</width>
+					<height>30</height>
 					<info>Player.Volume</info>
 				</control>
 			</control>
@@ -62,8 +65,8 @@
 					<visible>!Player.Muted</visible>
 					<left>0</left>
 					<top>0</top>
-					<width>200</width>
-					<height>200</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>CCFF0000</colordiffuse>
 					<texture>icons\volume.png</texture>
@@ -73,19 +76,19 @@
 					<description>Lite Volume Logo</description>
 					<left>0</left>
 					<top>0</top>
-					<width>200</width>
-					<height>200</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<texture>icons\mute.png</texture>
 				</control>
 				<control type="label">
 					<description>Passthrough Label</description>
-					<left>200</left>
-					<top>75</top>
-					<width>500</width>
-					<height>50</height>
+					<left>80</left>
+					<top>25</top>
+					<width>250</width>
+					<height>30</height>
 					<label>$LOCALIZE[29802]</label>
-					<font>font10_title</font>
+					<font>font30_title</font>
 					<textcolor>text</textcolor>
 					<shadowcolor>darktext</shadowcolor>
 					<align>left</align>

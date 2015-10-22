@@ -5,15 +5,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
-		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
-			<height>100</height>
-			<texture>floor.png</texture>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
-		</control>
+
 		<control type="image">
 			<description>Section header image</description>
 			<left>-5</left>
@@ -48,7 +40,7 @@
 				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<control type="image">
-				<left>510</left>
+				<left>500</left>
 				<top>20</top>
 				<width>80</width>
 				<height>80</height>
@@ -87,7 +79,7 @@
 				<left>10</left>
 				<top>110</top>
 				<width>25</width>
-				<height>450</height>
+				<height>420</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -104,7 +96,7 @@
 				<left>40</left>
 				<top>110</top>
 				<width>540</width>
-				<height>450</height>
+				<height>420</height>
 				<onleft>30</onleft>
 				<onright>21</onright>
 				<onup>20</onup>
@@ -117,10 +109,10 @@
 						<top>0</top>
 						<width>540</width>
 						<height>36</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture border="0,2,0,2">Back.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>5</left>
 						<top>0</top>
 						<width>500</width>
 						<height>36</height>
@@ -151,7 +143,7 @@
 						<width>540</width>
 						<height>36</height>
 						<visible>!Control.HasFocus(20)</visible>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture border="0,2,0,2">Back.png</texture>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -159,18 +151,10 @@
 						<width>540</width>
 						<height>36</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-					</control>
-					<control type="image">
-						<left>340</left>
-						<top>2</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(20) + !IsEmpty(ListItem.Label2)</visible>
+						<texture border="0,2,0,2">button-focus.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>5</left>
 						<top>0</top>
 						<width>500</width>
 						<height>36</height>
@@ -189,7 +173,7 @@
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>unfocus</textcolor>
+						<textcolor>focus</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
@@ -208,7 +192,7 @@
 				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<control type="image">
-				<left>20</left>
+				<left>30</left>
 				<top>20</top>
 				<width>80</width>
 				<height>80</height>
@@ -247,7 +231,7 @@
 				<left>575</left>
 				<top>110</top>
 				<width>25</width>
-				<height>450</height>
+				<height>420</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -264,7 +248,7 @@
 				<left>30</left>
 				<top>110</top>
 				<width>540</width>
-				<height>450</height>
+				<height>420</height>
 				<onleft>20</onleft>
 				<onright>31</onright>
 				<onup>21</onup>
@@ -277,10 +261,10 @@
 						<top>0</top>
 						<width>540</width>
 						<height>36</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture border="0,2,0,2">Back.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>5</left>
 						<top>0</top>
 						<width>500</width>
 						<height>36</height>
@@ -311,7 +295,7 @@
 						<width>540</width>
 						<height>36</height>
 						<visible>!Control.HasFocus(21)</visible>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
+						<texture border="0,2,0,2">back.png</texture>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -319,25 +303,17 @@
 						<width>540</width>
 						<height>36</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-					</control>
-					<control type="image">
-						<left>340</left>
-						<top>2</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(21) + !IsEmpty(ListItem.Label2)</visible>
+						<texture border="0,2,0,2">button-focus.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
+						<left>5</left>
 						<top>0</top>
 						<width>500</width>
 						<height>36</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>text</textcolor>
+						<textcolor>focus</textcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -349,7 +325,7 @@
 						<font>font12</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
-						<textcolor>unfocus</textcolor>
+						<textcolor>focus</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
 					</control>
@@ -358,84 +334,27 @@
 		</control>
 		<control type="label">
 			<description>number of files/pages in left list text label</description>
-			<left>40</left>
-			<top>53r</top>
+			<left>20</left>
+			<top>140r</top>
 			<width>570</width>
 			<font>font12</font>
 			<align>left</align>
 			<scroll>true</scroll>
-			<textcolor>unfocus</textcolor>
+			<textcolor>text</textcolor>
 			<shadowcolor>darktext</shadowcolor>
-			<label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+			<label>([COLOR=highlight]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=highlight]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
 		</control>
 		<control type="label">
 			<description>number of files/pages in left list text label</description>
-			<right>40</right>
-			<top>53r</top>
+			<right>20</right>
+			<top>140r</top>
 			<width>570</width>
 			<font>font12</font>
 			<align>right</align>
 			<scroll>true</scroll>
-			<textcolor>unfocus</textcolor>
+			<textcolor>text</textcolor>
 			<shadowcolor>darktext</shadowcolor>
-			<label>([COLOR=blue]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
-		</control>
-		<control type="group" id="10">
-			<left>595</left>
-			<top>55r</top>
-			<include>Window_OpenClose_Animation</include>
-			<visible>system.getbool(input.enablemouse)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<control type="button">
-				<description>Back push button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Back Icon</description>
-				<left>5</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_back.png</texture>
-			</control>
-			<control type="button">
-				<description>Home push button</description>
-				<left>55</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Home Icon</description>
-				<left>60</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
-			</control>
+			<label>([COLOR=highlight]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=highlight]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
 		</control>
 		<include>Clock</include>
 	</controls>

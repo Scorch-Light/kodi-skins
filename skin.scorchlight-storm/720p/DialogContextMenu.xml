@@ -18,9 +18,9 @@
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
-			<left>20</left>
-			<top>20</top>
-			<width>340</width>
+			<left>10</left>
+			<top>10</top>
+			<width>360</width>
 			<height max="670">auto</height>
 			<itemgap>2</itemgap>
 		</control>
@@ -28,7 +28,7 @@
 			<description>button template</description>
 			<left>-</left>
 			<top>-</top>
-			<width>340</width>
+			<width>360</width>
 			<height>40</height>
 			<font>font35_title</font>
 			<align>center</align>

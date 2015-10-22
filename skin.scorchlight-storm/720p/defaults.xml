@@ -24,8 +24,8 @@
 		<height>42</height>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<font>font13</font>
-		<textcolor>unfocus2</textcolor>
-		<disabledcolor>unfocus</disabledcolor>
+		<textcolor>focus</textcolor>
+		<disabledcolor>disabled</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
@@ -42,7 +42,7 @@
 		<textcolor>text</textcolor>
 		<label>-</label>
 		<font>font13</font>
-		<disabledcolor>unfocus</disabledcolor>
+		<disabledcolor>disabled</disabledcolor>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="textbox">
@@ -181,7 +181,6 @@
 		<width>300</width>
 		<height>42</height>
 		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>text</textcolor>
 		<disabledcolor>disabled</disabledcolor>

@@ -33,8 +33,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-					<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 					<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>20037</label>
@@ -48,8 +48,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-							<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 							<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13277</label>
@@ -63,8 +63,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-							<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 							<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13279</label>
@@ -78,8 +78,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-							<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 							<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13280</label>
@@ -93,8 +93,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-							<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 							<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13281</label>
@@ -108,8 +108,8 @@
 					<aligny>center</aligny>
 					<font>font35_title</font>
 					<textcolor>unfocus</textcolor>
-					<focusedcolor>darktext</focusedcolor>
-							<texturefocus border="5" >Back2.png</texturefocus>
+					<focusedcolor>focus</focusedcolor>
+					<texturefocus border="5" >button-focus.png</texturefocus>
 							<texturenofocus border="5" >Back.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>19191</label>

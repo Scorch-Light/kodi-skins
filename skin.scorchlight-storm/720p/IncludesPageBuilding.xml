@@ -162,7 +162,7 @@
 						<description>Player Controls push button</description>
 						<label>1036</label>
 						<onclick>ActivateWindow(playercontrols)</onclick>
-						<icon>icons\player.png</icon>
+						<icon>icons\play.png</icon>
 						<visible>Player.HasMedia</visible>
 					</item>
 					<item id="1004">

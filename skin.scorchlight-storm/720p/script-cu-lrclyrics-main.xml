@@ -3,8 +3,10 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<left>20</left>
-		<top>20</top>
+		<left>0</left>
+		<top>0</top>
+		<width>1280</width>
+		<height>690</height>
 	</coordinates>
 	<controls>
 		<control type="group">
@@ -12,30 +14,30 @@
 				<description>media info background image</description>
 				<left>0</left>
 				<top>0</top>
-				<width>1240</width>
-				<height>680</height>
+				<width>1280</width>
+				<height>690</height>
 				<texture border="5" flipx="true">Back.png</texture>
 			</control>
 			<include>close</include>
 			<control type="label">
 				<description>header label</description>
 				<left>20</left>
-				<top>40r</top>
-				<width>1200</width>
-				<height>30</height>
+				<top>650</top>
+				<width>800</width>
+				<height>40</height>
 				<font>font30_title</font>
 				<label>$ADDON[script.cu.lrclyrics 32199] - $INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
-				<align>center</align>
+				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>text</textcolor>
 				<shadowcolor>darktext</shadowcolor>
 			</control>
 			<control type="image">
-				<left>30</left>
-				<top>40r</top>
-				<width>550</width>
+				<left>0</left>
+				<top>650</top>
+				<width>1280</width>
 				<height>4</height>
-				<texture>separator.png</texture>
+				<texture>back2.png</texture>
 			</control>
 			
 			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
@@ -191,12 +193,12 @@
 			</control>
 			<control type="label">
 				<description>Scraper label</description>
-				<left>30</left>
-				<top>680</top>
+				<right>30</right>
+				<top>650</top>
 				<width>550</width>
-				<height>30</height>
+				<height>40</height>
 				<label>$LOCALIZE[31205] - $INFO[Control.GetLabel(200)]</label>
-				<font>font12_title</font>
+				<font>font30_title</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>unfocus</textcolor>

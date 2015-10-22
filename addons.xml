@@ -31,7 +31,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Skin by ScorchLight with Alternate Home Screen Layouts and Touch Optimisations</summary>
-    <description lang="en">A skin designed for Touch Screens and In-Car Entertainment With an Alternate Home Screen layout for Non-touch Screens</description>
+    <description lang="en">A skin designed for Touch Screens and In-Car Entertainment with an alternate home screen layout for Non-Touch Screens and also includes some OpenElec optimisation</description>
     <disclaimer lang="en"></disclaimer>
     <platform>all</platform>
   </extension>

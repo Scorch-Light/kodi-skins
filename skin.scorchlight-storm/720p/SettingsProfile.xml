@@ -39,9 +39,9 @@
 						<left>0</left>
 						<top>15</top>
 						<width>240</width>
-						<height>25</height>
+						<height>50</height>
 						<font>font35_title</font>
-						<textcolor>disabled</textcolor>
+						<textcolor>unfocus</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -53,15 +53,15 @@
 						<top>0</top>
 						<width>250</width>
 						<height>81</height>
-						<texture border="5" >Back2.png</texture>
+						<texture border="5">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<left>0</left>
 						<top>15</top>
 						<width>240</width>
-						<height>25</height>
+						<height>50</height>
 						<font>font35_title</font>
-						<textcolor>darktext</textcolor>
+						<textcolor>focus</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
