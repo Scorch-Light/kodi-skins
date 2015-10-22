@@ -1,0 +1,427 @@
+<window id="0">
+	<onload>RunScript("special://skin/scripts/check_calibration.py")</onload>
+	<onunload condition="Container(9000).Hasfocus(2) | Container(9000).Hasfocus(3) | ControlGroup(9010).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(1)">ClearProperty(VideosDirectLink)</onunload>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<visible>Player.HasVideo</visible>
+		</control>
+		
+		<include>CommonTopBar</include>		
+		<include>XbmcLogo</include>
+		<include>Time</include>
+		<include>Weather</include>
+		<include>Logob</include>
+		
+		
+
+			<!--Meniu by me-->
+	<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>135</posy>
+			<control type="button">
+				<description>Video Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>540</width>
+				<height>130</height>				
+				<texturenofocus>home_1.png</texturenofocus>
+				<texturefocus border="5">home_1_p.png</texturefocus>
+				<onclick>ActivateWindow(Videos,/home/pi/video)</onclick>
+			</control>
+			
+			<control type="image">
+				<description>Video Button Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>video2.png</texture>
+			</control>
+			<control type="label">
+				<description>Video label</description>
+				<posx>172</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>200</width>
+				<label>Videos</label>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>					
+			</control>
+		</control>
+		
+	  <include>Navigation</include>
+	  <include>Pictures</include>
+	  
+	  <include>Radio</include>
+	  <include>Favourites</include>
+	  
+		
+		<!--<control type="image">
+			<description>Normal Default Logo Image</description>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio></aspectratio>
+			<texture>logo.png</texture>
+			<visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>
+		<control type="image">
+			<description>User Set Logo Image</description>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomLogoPath)]</texture>
+			<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>-->
+		
+		<control type="image">
+			<description>Normal Default Logo Image</description>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio>scale</aspectratio>
+			<texture>logo.png</texture>
+			<visible>!Player.HasAudio + ![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>
+		<control type="image">
+			<description>User Set Logo Image</description>
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomLogoPath)]</texture>
+			<visible>!Player.HasAudio + Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>		
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<left>365</left>
+			<top>50</top>
+			<width>550</width>
+			<height>550</height>
+			<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+			<fadetime>600</fadetime>
+		</control>
+		<!--<control type="image" id="2">
+			<description>album cover</description>
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<left>555</left>
+			<top>260</top>
+			<width>170</width>
+			<height>170</height>
+			<visible>Player.HasAudio + Window.IsVisible(home) + !IsEmpty(MusicPlayer.Cover)</visible>
+			<fadetime>600</fadetime>
+			<texture>$INFO[MusicPlayer.Cover]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>-->
+		<control type="group">
+			<left>365</left>
+            <top>50</top>
+			<width>550</width>
+            <height>550</height>
+			<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+            <control type="label">
+                <visible>true</visible>
+                <left>150</left>
+				<top>145</top>
+                <width>250</width>
+                <height>100</height>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+                <info>MusicPlayer.Artist</info>
+                <scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+				<wrapmultiline>false</wrapmultiline>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <left>130</left>
+				<top>170</top>
+                <width>290</width>
+                <height>100</height>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+                <info>MusicPlayer.Title</info>
+				<scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+				<wrapmultiline>false</wrapmultiline>
+            </control>
+			<control type="label">
+				<visible>true</visible>
+				<left>110</left>
+				<top>455</top>
+                <width>250</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+				<label>[1]</label>
+				<info>MusicPlayer.Time</info>
+				<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+			</control>
+			<control type="label">
+				<visible>true</visible>
+				<left>150</left>
+				<top>455</top>
+                <width>250</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+				<label>/</label>
+				<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+			</control>
+			<control type="label">
+				<visible>true</visible>
+				<left>190</left>
+				<top>455</top>
+                <width>250</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+				<label>[1]</label>
+				<info>MusicPlayer.Duration</info>
+				<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+			</control>
+			<control type="label">
+				<description>Info Label Random</description>
+				<visible>true</visible>
+				<left>120</left>
+				<top>390</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Random</label>
+			</control>
+			<control type="label">
+				<description>Random Status</description>
+				<visible>true</visible>
+				<left>135</left>
+				<top>410</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Random</label>
+				<info>Playlist.Random</info>
+			</control>
+			<control type="label">
+				<description>Info Label Repeat</description>
+				<visible>true</visible>
+				<align>right</align>
+				<left>350</left>
+				<top>390</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Repeat</label>
+			</control>
+			<control type="label">
+				<description>Repeat Status</description>
+				<visible>true</visible>
+				<align>right</align>
+				<left>338</left>
+				<top>410</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Repeat</label>
+				<info>Playlist.Repeat</info>
+			</control>
+        </control>
+		  
+	
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>560r</posx>
+			<posy>135</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Music Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>540</width>
+				<height>130</height>
+				<font>-</font>
+				<texturenofocus >home_4.png</texturenofocus>
+				<texturefocus border="5">home_4_p.png</texturefocus>
+				<onclick>ActivateWindow(Music,/home/pi/musik)</onclick>
+			</control>
+			<control type="image">
+				<description>Music Button Image</description>
+				<posx>140r</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>music2.png</texture>
+			</control>
+			<control type="label">
+				<description>Music label</description>
+				<posx>170</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Music</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>428r</posx>
+			<posy>280</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Programs Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>408</width>
+				<height>130</height>
+				<font>-</font>
+				<texturenofocus >home_5.png</texturenofocus>
+				<texturefocus border="5">home_5_p.png</texturefocus>
+				<onclick>ActivateWindow(Programs)</onclick>
+			</control>
+			<control type="image">
+				<description>Programs Button Image</description>
+				<posx>140r</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>programs2.png</texture>
+			</control>
+			<control type="label">
+				<description>Programs label</description>
+				<posx>40</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Programs</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>			
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>560r</posx>
+			<posy>430</posy>
+			<visible>true</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Shutdown Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>540</width>
+				<height>130</height>
+				<font>-</font>
+				<texturenofocus>home_6.png</texturenofocus>
+				<texturefocus border="5">home_6_p.png</texturefocus>
+				<onclick>RunScript("special://skin/scripts/system_poweroff.py")</onclick>
+			</control>
+			<control type="image">
+				<description>Shutdown Button Image</description>
+				<posx>140r</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>shut-down2.png</texture>
+			</control>
+			<control type="label">
+				<description>Shutdown label</description>
+				<posx>170</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Shutdown</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>			
+			</control>
+		</control>
+		
+		<include>CommonBottomBar</include>
+
+		<!-- Song/radio info -->
+		<control type="group">
+			<posy>150r</posy>
+			<include>RadioStationName</include>
+		</control>
+
+		<include>HomeRecentlyAddedInfo</include>
+		<include>BottomNowPLaying</include>
+		
+		<control type="panel" id="9002">
+			<include>SubMenuCommonLayout</include>
+			<content>
+				<item>
+					<label></label>
+					<onclick>XBMC.PlayerControl(Random)</onclick>
+					<icon>special://skin/media/icons/random_icon.png</icon>
+					<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+				</item>
+				<item>
+					<label></label>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+					<icon>special://skin/media/icons/repeat_icon.png</icon>
+					<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+				</item>
+				<!--<item>
+					<label></label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<icon>special://skin/media/icons/reloadskin_icon.png</icon>
+				</item>-->
+				<item>
+					<label></label>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<icon>special://skin/media/icons/settings_icon.png</icon>
+				</item>
+				<item>
+					<label></label>
+					<onclick>RunScript("special://skin/scripts/system_reboot.py")</onclick>
+					<icon>special://skin/media/icons/reboot_icon.png</icon>
+					<visible>!Player.HasAudio + Window.IsVisible(home)</visible>
+				</item>
+			</content>
+		</control>		
+   		<include>BehindDialogFadeOut</include>
+	</controls>	
+</window>
