@@ -22,6 +22,7 @@
 		<visible>!IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
 		<fadetime>600</fadetime>
 	</control>
-	<include>Info</include>
+	<include>UniInfo</include>
+	<include>MusicInfo</include>
 	</controls>
 </window>

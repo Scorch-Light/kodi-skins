@@ -188,6 +188,18 @@
 						<onclick>Skin.ToggleSetting(FullInfo)</onclick>
 						<selected>Skin.HasSetting(FullInfo)</selected>
 					</control>
+					<control type="radiobutton" id="104">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Disable Info with Fullscreen Video and Visualisation OSD</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(NoOSDInfo)</onclick>
+						<selected>Skin.HasSetting(NoOSDInfo)</selected>
+					</control>
 					<control type="radiobutton" id="112">
 						<width>970</width>
 						<height>60</height>
