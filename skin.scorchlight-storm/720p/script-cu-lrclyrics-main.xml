@@ -31,6 +31,7 @@
 				<aligny>center</aligny>
 				<textcolor>text</textcolor>
 				<shadowcolor>darktext</shadowcolor>
+				<visible>Control.IsVisible(110)</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -42,17 +43,17 @@
 			
 			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
 			<control type="list" id="110">
-				<left>20</left>
+				<left>40</left>
 				<top>0</top>
 				<width>1200</width>
-				<height>600</height>
+				<height>650</height>
 				<onleft>111</onleft>
 				<onright>111</onright>
 				<onup>110</onup>
 				<ondown>110</ondown>
 				<pagecontrol>111</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="70">
+				<itemlayout height="60">
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -65,7 +66,7 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="70">
+				<focusedlayout height="60">
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -75,7 +76,7 @@
 						<aligny>center</aligny>
 						<align>center</align>
 						<shadowcolor>darktext</shadowcolor>
-						<textcolor>selected</textcolor>
+						<textcolor>highlight</textcolor>
 						<label fallback="--">$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
@@ -96,23 +97,23 @@
 			</control>
 			<control type="label" id="2">
 				<description>Pick label</description>
-				<left>30</left>
-				<top>130</top>
-				<width>550</width>
-				<height>30</height>
+				<left>20</left>
+				<top>650</top>
+				<width>800</width>
+				<height>40</height>
+				<font>font30_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font13_title</font>
 				<label>31203</label>
 				<textcolor>text</textcolor>
 				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
 			</control>
 			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
 			<control type="list" id="120">
-				<left>00</left>
-				<top>170</top>
-				<width>1000</width>
-				<height>440</height>
+				<left>40</left>
+				<top>0</top>
+				<width>1200</width>
+				<height>650</height>
 				<onleft>121</onleft>
 				<onright>121</onright>
 				<onup>120</onup>
@@ -120,80 +121,52 @@
 				<pagecontrol>121</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
-				<itemlayout height="40">
-					<control type="image">
+				<itemlayout height="60">
+					<control type="label">
 						<left>0</left>
 						<top>0</top>
-						<width>550</width>
-						<height>41</height>
-						<texture border="5">MenuItemNF.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>530</width>
-						<height>40</height>
-						<font>font13</font>
-						<align>left</align>
+						<width>1200</width>
+						<height>60</height>
+						<font>font35_title</font>
 						<aligny>center</aligny>
+						<align>center</align>
 						<selectedcolor>selected</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>41</height>
-						<visible>!Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemNF.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>550</width>
-						<height>41</height>
-						<visible>Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemFO.png</texture>
-					</control>
+				<focusedlayout height="60">
 					<control type="label">
-						<left>10</left>
+						<left>0</left>
 						<top>0</top>
-						<width>530</width>
-						<height>40</height>
-						<font>font13</font>
-						<align>left</align>
+						<width>1200</width>
+						<height>60</height>
+						<font>font35_title</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
+						<align>center</align>
+						<shadowcolor>darktext</shadowcolor>
+						<textcolor>highlight</textcolor>
+						<label fallback="--">$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="spincontrol" id="121">
 				<description>Next page button</description>
-				<left>900</left>
-				<top>550</top>
+				<left>1150</left>
+				<top>600</top>
 				<subtype>page</subtype>
-				<font>font12</font>
-				<onleft>120</onleft>
-				<onright>120</onright>
-				<ondown>120</ondown>
-				<onup>120</onup>
+				<font>font35_title</font>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<ondown>110</ondown>
+				<onup>110</onup>
 				<textcolor>highlight</textcolor>
 				<showonepage>true</showonepage>
 				<visible>Control.IsVisible(120)</visible>
 			</control>
-			<control type="image">
-				<left>30</left>
-				<top>640</top>
-				<width>550</width>
-				<height>4</height>
-				<texture>separator.png</texture>
-			</control>
+
 			<control type="label">
 				<description>Scraper label</description>
-				<right>30</right>
+				<right>20</right>
 				<top>650</top>
 				<width>550</width>
 				<height>40</height>

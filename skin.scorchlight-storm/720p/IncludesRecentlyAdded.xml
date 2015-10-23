@@ -3,7 +3,7 @@
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group" id="9003">
 			<left>45</left>
-			<top>70</top>
+			<top>80</top>
 			<onup>50</onup>
 			<ondown>1000</ondown>
 			<include>VisibleFadeEffect</include>
@@ -450,7 +450,7 @@
 					<ondown>1001</ondown>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="190" width="150">
+					<itemlayout height="170" width="150">
 						<control type="image">
 							<left>5</left>
 							<top>5</top>
@@ -466,19 +466,6 @@
 							<top>150</top>
 							<width>150</width>
 							<height>20</height>
-							<font>font10</font>
-							<textcolor>unfocus</textcolor>
-							<shadowcolor>darktext</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>170</top>
-							<width>150</width>
-							<height>20</height>
 							<font>font12</font>
 							<textcolor>text</textcolor>
 							<shadowcolor>darktext</shadowcolor>
@@ -488,7 +475,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="190" width="150">
+					<focusedlayout height="170" width="150">
 						<control type="image">
 							<left>5</left>
 							<top>5</top>
@@ -516,19 +503,6 @@
 							<top>150</top>
 							<width>150</width>
 							<height>20</height>
-							<font>font10</font>
-							<textcolor>unfocus</textcolor>
-							<shadowcolor>darktext</shadowcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="label">
-							<left>0</left>
-							<top>170</top>
-							<width>150</width>
-							<height>20</height>
 							<font>font12</font>
 							<textcolor>text</textcolor>
 							<shadowcolor>darktext</shadowcolor>
@@ -537,9 +511,10 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
+
 						<control type="label">
 							<left>0</left>
-							<top>170</top>
+							<top>150</top>
 							<width>150</width>
 							<height>20</height>
 							<font>font12</font>

@@ -18,24 +18,24 @@
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
-				<left>9</left>
-				<top>9</top>
-				<width>32</width>
-				<height>32</height>
+				<left>5</left>
+				<top>5</top>
+				<width>40</width>
+				<height>40</height>
 				<texture>busy\50%.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="16,16" time="1200" loop="true" condition="true">conditional</animation>
+				<animation effect="rotate" start="0" end="360" center="25,25" time="1200" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="label">
 				<description>Busy label</description>
 				<left>50</left>
-				<top>20</top>
+				<top>9</top>
 				<width>140</width>
 				<height>32</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[31004]</label>
-				<font>font12</font>
+				<font>font30</font>
 			</control>
 			<control type="progress" id="10">
 				<description>Progressbar</description>

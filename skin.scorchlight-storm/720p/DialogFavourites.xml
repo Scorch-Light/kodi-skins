@@ -3,26 +3,27 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>40</left>
-		<top>40</top>
+		<left>0</left>
+		<top>0</top>
+		<width>1280</width>
+		<height>720</height>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
+				<description>media info background image</description>
 				<left>0</left>
 				<top>0</top>
-				<width>1200</width>
-				<height>640</height>
-				<texture border="5" >Back.png</texture>
+				<width>1280</width>
+				<height>720</height>
+				<texture border="5" flipx="true">Back.png</texture>
 			</control>
 			<include>close</include>
 			<control type="panel" id="450">
-				<left>20</left>
-				<top>20</top>
-				<width>1160</width>
-				<height>600</height>
+				<left>40</left>
+				<top>40</top>
+				<width>1200</width>
+				<height>640</height>
 				<onup>450</onup>
 				<onleft>Dialog.Close(Favourites)</onleft>
 				<onright>450</onright>
@@ -92,8 +93,8 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<textcolor>unfocus</textcolor>
-				<label>([COLOR=blue]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+				<textcolor>white</textcolor>
+				<label>([COLOR=highlight]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=highlight]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
 			</control>
 		</control>
 	</controls>

@@ -517,8 +517,8 @@
 	<include name="close">
 		<control type="button">
 			<description>Close Window button</description>
-			<posx>15</posx>
-			<posy>-10</posy>
+			<posx>5</posx>
+			<posy>5</posy>
 			<width>64</width>
 			<height>40</height>
 			<label>-</label>
@@ -534,8 +534,8 @@
 		</control>
 		<control type="image">
 			<description>Banner</description>
-			<posx>15</posx>
-			<posy>-22</posy>
+			<posx>5</posx>
+			<posy>-7</posy>
 			<width>64</width>
 			<height>64</height>
 			<aspectratio>keep</aspectratio>
