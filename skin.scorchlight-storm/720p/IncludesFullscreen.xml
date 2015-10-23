@@ -527,6 +527,71 @@
 
 
 		</control>
+	
+		<control type="group" id="1"> <!-- Music Video Scroll-->
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<visible>!Skin.HasSetting(NoMusicVidScroll) + VideoPlayer.Content(MusicVideos) + ![Player.ShowInfo | Window.IsActive(MusicOSD) | Window.IsActive(VideoOSD)]</visible>				
+			<control type="group" id="1"> 	<!-- Progress Bar -->
+				<left>0</left>
+				<top>30r</top>				
+				<control type="progress" id="1">
+					<description>ProgressbarCache</description>
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>30</height>
+					<info>Player.ProgressCache</info>
+					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				</control>
+				<control type="progress" id="1">
+					<description>Progressbar</description>
+					<left>0</left>
+					<top>0</top>
+					<width>1280</width>
+					<height>30</height>
+					<info>Player.Progress</info>
+				</control>
+				
+				<control type="label" id="1">
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<left>25</left>
+					<top>0</top>
+					<width>100</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Time(hh:mm:ss)]</label>
+				</control>
+
+				<control type="label" id="1">
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<right>25</right>
+					<top>0</top>
+					<width>100</width>
+					<height>30</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+				</control>
+			</control>
+			<control type="label" id="1">	<!-- Info Scroll -->
+				<right>25</right>
+				<width>1280</width>
+				<top>70r</top>
+				<description>Scroll label</description>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<label>$LOCALIZE[31040]: $INFO[VideoPlayer.Artist,, - ]$INFO[Player.Title]</label>
+				<textcolor>text</textcolor>
+				<scroll>true</scroll>
+				<shadowcolor>darktext</shadowcolor>
+			</control>
+		</control>
+
 	</include>
 
 	<include name="VideoInfo">

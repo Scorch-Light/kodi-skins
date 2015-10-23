@@ -28,7 +28,7 @@
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>[COLOR=blue] - [/COLOR]$INFO[Container(9000).ListItem.Label]</label>
+				<label>[COLOR=highlight] - [/COLOR]$INFO[Container(9000).ListItem.Label]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -200,6 +200,18 @@
 						<onclick>Skin.ToggleSetting(NoOSDInfo)</onclick>
 						<selected>Skin.HasSetting(NoOSDInfo)</selected>
 					</control>
+					<control type="radiobutton" id="105">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Disable Music Video Info Scroll</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(NoMusicVidScroll)</onclick>
+						<selected>Skin.HasSetting(NoMusicVidScroll)</selected>
+					</control>					
 					<control type="radiobutton" id="112">
 						<width>970</width>
 						<height>60</height>
