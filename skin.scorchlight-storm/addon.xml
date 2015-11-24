@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.scorchlight-storm"
-  version="0.6.0"
+  version="0.7.0"
   name="Scorchlight-Storm"
   provider-name="ScorchLight">
   <requires>
-    <import addon="xbmc.gui" version="5.4.0"/>
+    <import addon="xbmc.gui" version="5.10.0"/>
   </requires>
   <extension
     point="xbmc.gui.skin"

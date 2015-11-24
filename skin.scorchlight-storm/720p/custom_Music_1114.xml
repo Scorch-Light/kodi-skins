@@ -31,30 +31,28 @@
 			</control>
 		</control>
 		<control type="panel" id="50">
-			<right>40</right>
+			<left>40</left>
 			<top>80</top>
-			<width>500</width>
-			<height>540</height>
-			<onleft>9003</onleft>
-			<onright>9003</onright>
-			<onup>9000</onup>
-			<ondown>1000</ondown>
+			<width>1200</width>
+			<height>300</height>
+			<onup>1000</onup>
+			<ondown>9003</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>300</scrolltime>
-			<itemlayout height="75" width="500">
+			<itemlayout height="100" width="400">
 				<control type="image">
 					<description>Back</description>
-					<left>0</left>
+					<left>5</left>
 					<top>5</top>
-					<width>500</width>
-					<height>70</height>
+					<width>390</width>
+					<height>90</height>
 					<texture border="5">Back.png</texture>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
-					<width>500</width>
-					<height>75</height>
+					<left>5</left>
+					<top>5</top>
+					<width>390</width>
+					<height>90</height>
 					<font>font_MainMenu</font>
 					<textcolor>unfocus</textcolor>
 					<align>center</align>
@@ -62,20 +60,20 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="75" width="500">
+			<focusedlayout height="100" width="400">
 				<control type="image">
 					<description>Back</description>
-					<left>0</left>
+					<left>5</left>
 					<top>5</top>
-					<width>500</width>
-					<height>70</height>
+					<width>390</width>
+					<height>90</height>
 					<texture border="5">Back.png</texture>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
-					<width>500</width>
-					<height>75</height>
+					<left>5</left>
+					<top>5</top>
+					<width>390</width>
+					<height>90</height>
 					<font>font_MainMenu</font>
 					<textcolor>unfocus</textcolor>
 					<align>center</align>
@@ -83,10 +81,10 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
-					<width>500</width>
-					<height>75</height>
+					<left>5</left>
+					<top>5</top>
+					<width>390</width>
+					<height>90</height>
 					<font>font_MainMenu</font>
 					<textcolor>highlight</textcolor>
 					<align>center</align>
@@ -134,10 +132,15 @@
 					<label>744</label>
 					<onclick>ActivateWindow(MusicFiles)</onclick>
 				</item>
+				<item id="90102">
+					<label>24001</label>
+					<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+					<icon>icons\songs.png</icon>
+				</item>
 
 			</content>
 		</control>
-		<include>HomeRecentlyAddedInfo</include>
+		 <include>HomeRecentlyAddedInfo</include>
 		<include>Clock</include>
 	</controls>
 </window>

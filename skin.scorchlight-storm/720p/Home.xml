@@ -20,87 +20,72 @@
 				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<control type="panel" id="50">
-				<left>40</left>
-				<top>90</top>
-				<width>1200</width>
-				<height>510</height>
+				<left>10</left>
+				<top>80</top>
+				<width>1280</width>
+				<height>400</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>9002</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="128" width="600">
-					<control type="image">
-						<description>Back</description>
-						<left>4</left>
-						<top>4</top>
-						<width>592</width>
-						<height>120</height>
-						<texture border="5">Back.png</texture>
-					</control>
+				<itemlayout height="200" width="420">
 					<control type="image">
 						<description>Icon</description>
 						<left>0</left>
 						<top>0</top>
-						<width>128</width>
-						<height>128</height>
+						<width>420</width>
+						<height>160</height>
 						<aspectratio>keep</aspectratio>
 						<texture >$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>160</left>
-						<top>0</top>
-						<width>440</width>
-						<height>128</height>
+						<left>10</left>
+						<top>130</top>
+						<width>400</width>
+						<height>60</height>
 						<font>font_MainMenu</font>
-						<textcolor>unfocus</textcolor>
+						<textcolor>focus</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					
 				</itemlayout>
-				<focusedlayout height="128" width="600">
-					<control type="image">
-						<description>Back</description>
-						<left>4</left>
-						<top>4</top>
-						<width>592</width>
-						<height>120</height>
-						<texture border="5">Back.png</texture>
-					</control>
+				<focusedlayout height="200" width="420">
 					<control type="image">
 						<description>Icon</description>
 						<left>0</left>
 						<top>0</top>
-						<width>128</width>
-						<height>128</height>
+						<width>420</width>
+						<height>160</height>
 						<aspectratio>keep</aspectratio>
-						<texture >$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>160</left>
-						<top>0</top>
-						<width>440</width>
-						<height>128</height>
+						<left>10</left>
+						<top>130</top>
+						<width>400</width>
+						<height>60</height>
 						<font>font_MainMenu</font>
-						<textcolor>unfocus</textcolor>
+						<textcolor>focus</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
-						<left>160</left>
-						<top>0</top>
-						<width>440</width>
-						<height>128</height>
+						<left>10</left>
+						<top>130</top>
+						<width>400</width>
+						<height>60</height>
 						<font>font_MainMenu</font>
 						<textcolor>highlight</textcolor>
+						<shadowcolor>darktext</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>Control.HasFocus(50)</visible>
-						<include>VisibleFadeEffect</include>
 					</control>
 				</focusedlayout>
 				<content>
@@ -128,11 +113,13 @@
 					</item>
 					<item id="1">
 						<label>31957</label>
-						<onclick>ActivateWindow(1115)</onclick>
+						<!-- <onclick>ActivateWindow(1115)</onclick> -->
 						<icon>icons\addons.png</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-					</item>
+						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+					</item>	
 					<item id="7">
 						<label>31950</label>
 						<onclick>ActivateWindow(Weather)</onclick>
@@ -160,10 +147,8 @@
 			
 		</control>
 
-		<!-- Horizontal Wrap View -->
+		<!-- Aditional View -->
 		<control type="group">
-			<left>0</left>
-			<top>400</top>
 			<visible>Skin.HasSetting(AltHomeView)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
@@ -173,170 +158,200 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
 				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
-			<control type="image">
-				<description>Back</description>
-				<left>-5</left>
-				<top>0</top>
-				<width>1290</width>
-				<height>120</height>
-				<texture border="5">Back.png</texture>
-			</control>
-			<control type="wraplist" id="50">
-				<left>20</left>
-				<top>0</top>
-				<width>1260</width>
-				<height>120</height>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9002</onup>
-				<ondown  condition="Control.IsVisible(9002)">9002</ondown>
-				<ondown  condition="!Control.IsVisible(9002)">100</ondown>
-				<pagecontrol>-</pagecontrol>
-				<scrolltime>500</scrolltime>
-				<orientation>horizontal</orientation>
-				<itemlayout height="120" width="450">
-					<control type="label">
-						<width>400</width>
-						<left>120</left>
-						<height>120</height>
-						<font>font_MainMenu</font>
-						<textcolor>unfocus</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="image">
-						<description>Icon</description>
-						<left>0</left>
-						<top>0</top>
-						<width>120</width>
-						<height>120</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout height="120" width="450">
-					<control type="label">
-						<width>400</width>
-						<left>120</left>
-						<height>120</height>
-						<font>font_MainMenu</font>
-						<textcolor>unfocus</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>400</width>
-						<height>120</height>
-						<left>120</left>
-						<font>font_MainMenu</font>
-						<textcolor>highlight</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Control.HasFocus(50)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<description>Icon</description>
-						<left>0</left>
-						<top>0</top>
-						<width>120</width>
-						<height>120</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-				</focusedlayout>
-				<content>
-					<item id="2">
-						<label>31953</label>
-						<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(1113)</onclick>
-						<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(1113,root)</onclick>
-						<icon>icons\film.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-					</item>
-					<item id="3">
-						<label>31956</label>
-						<onclick>ActivateWindow(1114)</onclick>
-						<icon>icons\songs.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
-					</item>
-					<item id="4">
-						<label>31951</label>
-						<onclick>ActivateWindow(Pictures)</onclick>
-						<icon>icons\pictures.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
-					</item>
-					<item id="1">
-						<label>31957</label>
-						<onclick>ActivateWindow(1115)</onclick>
-						<icon>icons\addons.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-					</item>
-					<item id="7">
-						<label>31950</label>
-						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>icons\sun.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[31952] & $LOCALIZE[31960]</label>
-						<onclick>ActivateWindow(1116)</onclick>
-						<icon>icons\livetv.png</icon>
-						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPVRButton)+[PVR.HasTVChannels|PVR.HasRadioChannels]</visible>
-					</item>
+			<!-- Centre Logo -->
 
-					<item id="6">
-						<label>31958</label>
-						<onclick>PlayDVD()</onclick>
-						<icon>icons\dvd.png</icon>
-						<thumb>-</thumb>
-						<visible>System.HasMediaDVD</visible>
-					</item>
-				</content>
+			<control type="image">
+				<description>Normal Default Logo Image</description>
+				<posx>440</posx>
+				<posy>85</posy>
+				<width>400</width>
+				<height>400</height>
+				<aspectratio>keep</aspectratio>
+				<texture>logo.png</texture>
+				<visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+				<include>Window_OpenClose_Animation_Zoom</include>
 			</control>
-			
+			<control type="image">
+				<description>User Set Logo Image</description>
+				<posx>440</posx>
+				<posy>85</posy>
+				<width>400</width>
+				<height>400</height>
+				<aspectratio>scale</aspectratio>
+				<texture>$INFO[Skin.String(CustomLogoPath)]</texture>
+				<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
+				<include>Window_OpenClose_Animation_Zoom</include>
+			</control>
+			<control type="image">
+				<description>Normal Default Logo Back</description>
+				<posx>0</posx>
+				<posy>85</posy>
+				<width>1280</width>
+				<height>400</height>
+				<aspectratio>keep</aspectratio>
+				<texture>HomeOverlay.png</texture>
+			</control>
+
+			<control type="button" id="50">
+				<left>90</left>
+				<top>90</top>
+				<width>350</width>
+				<height>130</height>
+				<font>font_MainMenu</font>
+				<label>31953</label>
+				<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(1113)</onclick>
+				<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(1113,root)</onclick>
+				<icon>icons\film.png</icon>
+				<texturefocus></texturefocus>
+				<thumb>-</thumb>
+				<onup>1000</onup>
+				<ondown>4</ondown>
+				<align>right</align>
+				<onleft></onleft>
+				<onright>3</onright>
+				<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+			</control >
+			<control type="button" id="3">
+				<left>840</left>
+				<top>90</top>
+				<width>350</width>
+				<height>130</height>
+				<font>font_MainMenu</font>
+				
+				<label>31956</label>
+				<onclick>ActivateWindow(1114)</onclick>
+				<icon>icons\songs.png</icon>
+				<thumb>-</thumb>
+				<onup>1000</onup>
+				<ondown>1</ondown>
+				<onleft>50</onleft>
+				<onright></onright>
+				<texturefocus></texturefocus>
+				<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+			</control>
+			<control type="button" id="4">
+				<left>40</left>
+				<top>220</top>
+				<width>350</width>
+				<height>130</height>
+				<align>right</align>
+				<font>font_MainMenu</font>
+				<label>31951</label>
+				<onclick>ActivateWindow(Pictures)</onclick>
+				<icon>icons\pictures.png</icon>
+				<thumb>-</thumb>
+				<onup>50</onup>
+				<ondown>5</ondown>
+				<onleft></onleft>
+				<onright>1</onright>
+				<texturefocus></texturefocus>
+				<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+			</control>
+			<control type="button" id="1">
+				<left>890</left>
+				<top>220</top>
+				<width>350</width>
+				<height>130</height>
+				<font>font_MainMenu</font>
+				<label>31957</label>
+				<!-- <onclick>ActivateWindow(1115)</onclick> -->
+				<icon>icons\addons.png</icon>
+				<thumb>-</thumb>
+				<onup>3</onup>
+				<ondown>4</ondown>
+				<onleft>4</onleft>
+				<onright></onright>
+				<texturefocus></texturefocus>
+				<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+				<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+				<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+			</control>	
+<!-- 			<control type="button" id="7">
+				<left>40</left>
+				<top>90</top>
+				<width>300</width>
+				<height>130</height>
+				<font>font_MainMenu</font>
+				<label>31950</label>
+				<onclick>ActivateWindow(Weather)</onclick>
+				<icon>icons\sun.png</icon>
+				<thumb>-</thumb>
+				<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+			</control> -->
+			<control type="button" id="5">
+				<left>40</left>
+				<top>350</top>
+				<width>350</width>
+				<height>130</height>
+				<align>right</align>
+				<font>font_MainMenu</font>
+				<label>$LOCALIZE[31952] & $LOCALIZE[31960]</label>
+				<onclick>ActivateWindow(1116)</onclick>
+				<icon>icons\livetv.png</icon>
+				<texturefocus></texturefocus>
+				<thumb>-</thumb>
+				<onup>4</onup>
+				<ondown>605</ondown>
+				<onleft></onleft>
+				<onright>6</onright>
+				<visible>!Skin.HasSetting(HomeMenuNoPVRButton)+[PVR.HasTVChannels|PVR.HasRadioChannels]</visible>
+			</control>
+			<control type="button" id="6">
+				<left>890</left>
+				<top>350</top>
+				<width>350</width>
+				<height>130</height>
+				<font>font_MainMenu</font>
+				<label>31958</label>
+				<onclick>PlayDVD()</onclick>
+				<icon>icons\dvd.png</icon>
+				<texturefocus></texturefocus>
+				<thumb>-</thumb>
+				<onup>1</onup>
+				<ondown>9002</ondown>
+				<onleft>5</onleft>
+				<onright></onright>
+				<visible>System.HasMediaDVD</visible>
+			</control>
 		</control>
 
 		<!-- Addon Shortcuts -->
 		<control type="list" id="9002">
+			<animation effect="slide" start="0" end="420" time="0" condition="Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)">Conditional</animation>
+				
 			<include>Window_OpenClose_Animation</include>
-				<left>420</left>
+				<left>435</left>
 				<top>220r</top>
-				<width>440</width>
+				<width>410</width>
 				<height>100</height>
 				<onup>50</onup>
 				<ondown>1000</ondown>
+				<onleft>605</onleft>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
-				<itemlayout height="100" width="110">
-				<control type="image">
+				<itemlayout height="100" width="100">
+					<control type="image">
 						<left>5</left>
 						<top>0</top>
 						<width>100</width>
 						<height>100</height>
 						<bordersize> 5</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<bordertexture border="5" >button-nofocus.png</bordertexture>
+						<aspectratio>keep</aspectratio><!-- 
+						<bordertexture border="5" >button-nofocus.png</bordertexture> -->
 					</control>
 				</itemlayout>
-				<focusedlayout height="100" width="110">
+				<focusedlayout height="100" width="100">
 					<control type="image">
 						<left>5</left>
 						<top>0</top>
 						<width>100</width>
-						<height>100</height>
-						<bordertexture border="5" >button-nofocus.png</bordertexture>
+						<height>100</height><!-- 
+						<bordertexture border="5" >button-nofocus.png</bordertexture> -->
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>!Control.HasFocus(9002)</visible>
 					</control>
 					<control type="image">
@@ -347,6 +362,7 @@
 						<bordertexture border="5" >button-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>Control.HasFocus(9002)</visible>
 					</control>
 				</focusedlayout>
@@ -385,47 +401,59 @@
 		
 		<!-- Weather -->
 		<control type="group">
-			<left>25</left>
-			<top>180r</top>
+			<left>15</left>
+			<top>220r</top>
 			<visible>Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)</visible>
 			<include>Window_OpenClose_Animation</include>
+			<control type="button" id="605">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>410</width>
+				<height>100</height>
+				<onclick>ActivateWindow(Weather)</onclick>			
+				<texturenofocus></texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<onright>9002</onright>
+				<onup>50</onup>
+				<ondown>1000</ondown>
+			</control>
 			<control type="image">
 				<description>Weather image</description>
-				<left>0</left>
+				<left>100</left>
 				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<aspectratio>keep</aspectratio>
+				<width>100</width>
+				<height>80</height>
+				<aspectratio aligny="top">keep</aspectratio>
 				<texture>$INFO[Weather.Conditions]</texture>
 			</control>
 			<control type="label">
 				<description>Location label</description>
-				<left>65</left>
-				<top>5</top>
+				<left>200</left>
+				<top>50</top>
 				<width>500</width>
-				<height>15</height>
+				<height>10</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font10</font>
+				<font>font28</font>
 				<textcolor>text</textcolor>
 				<shadowcolor>darktext</shadowcolor>
 				<label>$INFO[Window(Weather).Property(Location)]</label>
 			</control>
 			<control type="grouplist">
-				<left>65</left>
-				<top>20</top>
-				<width>1000</width>
-				<height>30</height>
+				<left>5</left>
+				<top>5</top>
+				<width>100</width>
+				<height>60</height>
 				<orientation>horizontal</orientation>
-				<align>left</align>
+				<align>right</align>
 				<itemgap>0</itemgap>
 				<control type="label">
 					<description>Temp label</description>
-					<width min="0" max="300">auto</width>
-					<height>30</height>
+					<width min="0" max="90">auto</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font28_title</font>
+					<font>font_MainMenu</font>
 					<textcolor>text</textcolor>
 					<shadowcolor>darktext</shadowcolor>
 					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
@@ -434,25 +462,30 @@
 					<description>Temp Units</description>
 					<width min="0" max="100">auto</width>
 					<height>22</height>
-					<font>font10</font>
+					<font>font28</font>
 					<aligny>center</aligny>
 					<label>$INFO[System.TemperatureUnits]</label>
 					<textcolor>text</textcolor>
 					<shadowcolor>darktext</shadowcolor>
 					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 				</control>
-				<control type="label">
-					<description>Conditions Label</description>
-					<width>500</width>
-					<height>30</height>
-					<font>font28_title</font>
-					<aligny>center</aligny>
-					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-					<textcolor>unfocus</textcolor>
-					<shadowcolor></shadowcolor>
-				</control>
+
+			</control>
+			<control type="label">
+				<description>Conditions Label</description>
+				<left>0</left>
+				<top>65</top>
+				<width>400</width>
+				<height>30</height>
+				<font>font28_title</font>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+				<textcolor>text</textcolor>
+				<shadowcolor></shadowcolor>
 			</control>
 		</control>
+		
+
 		
 		<include>Clock</include>
 		<include>Date</include>		

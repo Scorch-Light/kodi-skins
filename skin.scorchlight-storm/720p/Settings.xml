@@ -16,9 +16,9 @@
 			</animation>
 
 			<control type="panel" id="50">
-				<left>40</left>
+				<left>15</left>
 				<top>80</top>
-				<width>1240</width>
+				<width>1250</width>
 				<height>500</height>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
@@ -26,62 +26,63 @@
 				<ondown>1000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="80" width="620">
-					<control type="image">
+				<itemlayout height="150" width="250">
+<!-- 					<control type="image">
 						<description>Back</description>
 						<left>0</left>
 						<top>0</top>
 						<width>580</width>
 						<height>75</height>
 						<texture border="5">Back.png</texture>
-					</control>
+					</control> -->
 					<control type="image">
 						<description>icon</description>
 						<left>0</left>
 						<top>0</top>
-						<width>100</width>
-						<height>75</height>	
+						<width>250</width>
+						<height>150</height>	
 						<aspectratio>keep</aspectratio>
 						<texture >$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>100</left>
-						<top>0</top>
-						<width>480</width>
-						<height>75</height>
-						<font>font_MainMenu</font>
-						<textcolor>unfocus</textcolor>
-						<align>left</align>
+						<left>0</left>
+						<top>125</top>
+						<width>250</width>
+						<height>50</height>
+						<font>font35_title</font>
+						<textcolor>text</textcolor>
+						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="80" width="620">
-					<control type="image">
+				<focusedlayout height="150" width="200">
+<!-- 					<control type="image">
 						<description>Back</description>
 						<left>0</left>
 						<top>0</top>
 						<width>580</width>
 						<height>75</height>
 						<texture border="5">button-focus.png</texture>
-					</control>
+					</control> -->
 					<control type="image">
 						<description>icon</description>
 						<left>0</left>
 						<top>0</top>
-						<width>100</width>
-						<height>75</height>	
+						<width>250</width>
+						<height>150</height>	
 						<aspectratio>keep</aspectratio>
 						<texture >$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>100</left>
-						<top>0</top>
-						<width>480</width>
-						<height>75</height>
-						<font>font_MainMenu</font>
-						<textcolor>focus</textcolor>
-						<align>left</align>
+						<left>0</left>
+						<top>125</top>
+						<width>250</width>
+						<height>50</height>
+						<font>font35_title</font>
+						<textcolor>highlight</textcolor>
+						<shadowcolor>darktext</shadowcolor>
+						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -97,7 +98,7 @@
 						<label>20077</label>
 						<label2></label2>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<icon>icons\eye.png</icon>
+						<icon>icons\swissarmy.png</icon>
 					</item>
 					<item id="2">
 						<label>157</label>
@@ -167,12 +168,12 @@
 
 			<control type="textbox">
 				<description>Appearance Description</description>
-				<left>25</left>
-				<top>575</top>
-				<width>1230</width>
-				<height>25</height>
+				<left>765</left>
+				<top>450</top>
+				<width>500</width>
+				<height>150</height>
 				<label>$INFO[Container(50).ListItem.Label2]</label>
-				<align>center</align>
+				<align>right</align>
 				<textcolor>text</textcolor>
 				<shadowcolor>darktext</shadowcolor>
 			</control>

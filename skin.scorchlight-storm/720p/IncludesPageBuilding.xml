@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="TouchFavourButton">
+			<control type="button">
+			<description>Close Window button</description>
+			<posx></posx>
+			<posy></posy>
+			<width></width>
+			<height></height>
+			<label></label>
+			<font></font>
+			<onclick></onclick>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+	</include>
 	<include name="CommonBackground">
+		<include>TouchFavourButton</include>
 		<control type="image">
 			<description>Normal Default Background Image</description>
 			<left>0</left>
@@ -54,13 +74,13 @@
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 		</control>
 		<control type="image">
-			<left>0</left>
-			<top>-40</top>
-			<width>1280</width>
+			<left>-5</left>
+			<top>-5</top>
+			<width>1290</width>
 			<height>120</height>
-			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
-			<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
-			<include>VisibleFadeEffect</include>
+			<texture flipy="true">HomeNowPlayingBack.png</texture>
+			<!-- <visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
+ -->			<include>VisibleFadeEffect</include>
 		</control>
 
 
@@ -70,7 +90,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1280</width>
-				<height>620</height>
+				<height>720</height>
 				<fadetime>600</fadetime>
 				<visible>Window.IsVisible(4) | Window.IsVisible(7) | Window.IsVisible(35) | Window.IsVisible(11) | Window.IsVisible(34) | Window.IsVisible(12) | Window.IsVisible(19) | Window.IsVisible(14) | Window.IsVisible(16) | Window.IsVisible(15) | Window.IsVisible(13) | Window.IsVisible(21) | Window.IsVisible(17) | Window.IsVisible(18) | Window.IsVisible(130)</visible>
 				<texture background="true">special://skin/backgrounds/settings.jpg</texture>
@@ -80,7 +100,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1280</width>
-				<height>620</height>
+				<height>720</height>
 				<texture>ContentPanel.png</texture>
 			</control>
 			<control type="image">
@@ -91,12 +111,13 @@
 				<texture>back.png</texture>
 				<visible>Control.IsVisible(500)</visible>
 			</control>
+
 			<control type="image">
 				<left>-5</left>
-				<top>100r</top>
+				<top>115r</top>
 				<width>1290</width>
-				<height>105</height>
-				<texture border="5">Back.png</texture>
+				<height>120</height>
+				<texture border="5">HomeNowPlayingBack.png</texture>
 			</control>
 
 			<!-- Left Footer Menu -->
@@ -109,13 +130,14 @@
 				<itemgap>20</itemgap>
 				<onup>50</onup>
 				<onright>2000</onright>
+				<visible>!Window.IsVisible(videoinfo)</visible>
 				<itemlayout height="80" width="90">
-					<control type="image">
+<!-- 					<control type="image">
 						<width>80</width>
 						<height>80</height>
 						<aspectratio>keep</aspectratio>
 						<texture border="5">floor_button.png</texture>
-					</control>
+					</control> -->
 					<control type="image">
 						<width>80</width>
 						<height>80</height>
@@ -131,13 +153,13 @@
 						<texture border="5">floor_buttonFO.png</texture>
 						<visible>Control.HasFocus(1000)</visible>
 					</control>
-					<control type="image">
+<!-- 					<control type="image">
 						<width>80</width>
 						<height>80</height>
 						<aspectratio>keep</aspectratio>
 						<texture border="5">floor_button.png</texture>
 						<visible>!Control.HasFocus(1000)</visible>
-					</control>
+					</control> -->
 					<control type="image">
 						<width>80</width>
 						<height>80</height>
@@ -158,48 +180,44 @@
 						<onclick>ActivateWindow(ShutdownMenu)</onclick>
 						<icon>icons\power.png</icon>
 					</item>
-					<item id="1003">
-						<description>Player Controls push button</description>
-						<label>1036</label>
-						<onclick>ActivateWindow(playercontrols)</onclick>
-						<icon>icons\play.png</icon>
-						<visible>Player.HasMedia</visible>
-					</item>
-					<item id="1004">
-						<description>Full Screen push button</description>
-						<label>1036</label>
-						<onclick>fullscreen</onclick>
-						<icon>icons\fullscreen.png</icon>
-						<visible>Player.HasMedia</visible>
-					</item>
 					<item id="1005">
 						<description>Search push button</description>
 						<label>1036</label>
 						<onclick>RunAddon(script.globalsearch)</onclick>
 						<icon>icons\search.png</icon>
-						<visible>System.HasAddon(script.globalsearch) + !Player.HasMedia</visible>
+						<visible>System.HasAddon(script.globalsearch)</visible>
 					</item>
+					<item id="1003">
+						<description>Player Controls push button</description>
+						<label>1036</label>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+						<!-- <onclick>XBMC.PlayerControl(Play)</onclick> -->
+						<icon>icons\play.png</icon>
+						<visible>Player.HasMedia</visible>
+					</item>
+
 
 				</content>
 			</control>
 
 			<!-- Right Footer Menu -->			
 			<control type="list" id="2000">
-				<left>360r</left>
+				<right>10</right>
 				<top>90r</top>
 				<height>80</height>
 				<orientation>horizontal</orientation>
-				<align>right</align>
-				<width>380</width>
+				<align>center</align>
+				<width>360</width>
 				<itemgap>20</itemgap>
 				<onleft>1000</onleft>
+				<animation effect="slide" start="0" end="90" time="0" condition="[Window.IsVisible(home) | Window.IsVisible(4)] + !Player.HasMedia">Conditional</animation>
 				<itemlayout height="80" width="90">
-					<control type="image">
+<!-- 					<control type="image">
 						<width>80</width>
 						<height>80</height>
 						<aspectratio>keep</aspectratio>
 						<texture border="5">floor_button.png</texture>
-					</control>
+					</control> -->
 					<control type="image">
 						<width>80</width>
 						<height>80</height>
@@ -215,13 +233,13 @@
 						<texture border="5">floor_buttonFO.png</texture>
 						<visible>Control.HasFocus(2000)</visible>
 					</control>
-					<control type="image">
+<!-- 					<control type="image">
 						<width>80</width>
 						<height>80</height>
 						<aspectratio>keep</aspectratio>
 						<texture border="5">floor_button.png</texture>
 						<visible>!Control.HasFocus(2000)</visible>
-					</control>
+					</control> -->
 					<control type="image">
 						<width>80</width>
 						<height>80</height>
@@ -230,44 +248,47 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="1005">
-						<description>Search push button</description>
-						<label>1036</label>
-						<onclick>RunAddon(script.globalsearch)</onclick>
-						<icon>icons\search.png</icon>
-						<visible>System.HasAddon(script.globalsearch) + Player.HasMedia</visible>
+					<item id="2001">
+						<description>Info button</description>
+						<onclick>ActivateWindow(7)</onclick>
+						<label>130</label>
+						<icon>icons/sysinfo.png</icon>	
+						<visible>Window.IsVisible(4) | Window.IsVisible(home)</visible>
 					</item>
 					<item id="2002">
 						<description>File button</description>
 						<onclick>ActivateWindow(3)</onclick>
 						<label>10126</label>
 						<icon>icons/files.png</icon>	
+						<visible>!Window.IsVisible(4)</visible>
 					</item>
+
 					<item id="2003">
-						<visible>system.getbool(input.enablemouse) + !Window.IsVisible(home)</visible>
+						<visible>!Window.IsVisible(home)</visible>
 						<label>1036</label>
 						<onclick>back</onclick>
 						<icon>icons\back.png</icon>
 					</item>
 					<item id="2004">
-						<visible>system.getbool(input.enablemouse)+ !Window.IsVisible(home)</visible>
+						<visible>!Window.IsVisible(home)</visible>
 						<label>31003</label>
 						<onclick>ActivateWindow(home)</onclick>
 						<icon>icons\home.png</icon>
 					</item>
-					<item id="2001">
-						<description>Info button</description>
-						<onclick>ActivateWindow(7)</onclick>
-						<label>130</label>
-						<icon>icons/sysinfo.png</icon>	
-						<visible>Window.IsVisible(home) | Window.IsVisible(4)</visible>
-					</item>
+
 					<item id="2005">
 						<description>Settings button</description>
 						<onclick>ActivateWindow(4)</onclick>
 						<label>5</label>
 						<visible>!Window.IsVisible(4)</visible>
 						<icon>icons/settings.png</icon>	
+					</item>
+					<item id="1004">
+						<description>Full Screen push button</description>
+						<label>1036</label>
+						<onclick>fullscreen</onclick>
+						<icon>icons\fullscreen.png</icon>
+						<visible>Player.HasMedia</visible>
 					</item>
 				</content>
 			</control>
@@ -280,7 +301,7 @@
 				<height>100</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Logo.png</texture>
-				<visible>!Player.HasMedia</visible>
+				<visible>[!Player.HasMedia] + [Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)] + ![Skin.HasSetting(AltHomeView) + Window.IsVisible(Home)]</visible>
 			</control>
 			
 			<!-- Common Now Playing -->
@@ -290,22 +311,24 @@
 				<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 				<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>80r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[Player.Title] - ([COLOR=highlight]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
+					<scroll>true</scroll>
 					<shadowcolor>darktext</shadowcolor>
 				</control>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>50r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
@@ -313,11 +336,12 @@
 					<visible>Player.HasAudio</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>50r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[VideoPlayer.Studio]</label>
+					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
@@ -325,11 +349,12 @@
 					<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>50r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
@@ -337,11 +362,12 @@
 					<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>50r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[VideoPlayer.Artist]</label>
+					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
@@ -349,11 +375,12 @@
 					<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
+					<left>365</left>
 					<top>50r</top>
-					<width>1280</width>
+					<width>550</width>
 					<height>30</height>
 					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
+					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>

@@ -137,6 +137,11 @@
 						<label2>31200</label2>
 						<onclick>noop</onclick>
 					</item>
+					<item id="5">
+						<label>Fullscreen</label>
+						<label2>31112</label2>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
 			<control type="group" id="9010">
@@ -163,55 +168,7 @@
 						<texturenofocus border="5" >Back.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
-					</control>
-					<control type="radiobutton" id="102">
-						<width>970</width>
-						<height>60</height>
-						<font>font13</font>
-						<label>31103</label>
-						<textcolor>unfocus</textcolor>
-						<focusedcolor>darktext</focusedcolor>
-						<texturefocus border="5" >Back2.png</texturefocus>
-						<texturenofocus border="5" >Back.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
-						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
-					</control>
-					<control type="radiobutton" id="103">
-						<width>970</width>
-						<height>60</height>
-						<font>font13</font>
-						<label>Permanently Show Info In Visulisation</label>
-						<textcolor>unfocus</textcolor>
-						<focusedcolor>darktext</focusedcolor>
-						<texturefocus border="5" >Back2.png</texturefocus>
-						<texturenofocus border="5" >Back.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(FullInfo)</onclick>
-						<selected>Skin.HasSetting(FullInfo)</selected>
-					</control>
-					<control type="radiobutton" id="104">
-						<width>970</width>
-						<height>60</height>
-						<font>font13</font>
-						<label>Disable Info with Fullscreen Video and Visualisation OSD</label>
-						<textcolor>unfocus</textcolor>
-						<focusedcolor>darktext</focusedcolor>
-						<texturefocus border="5" >Back2.png</texturefocus>
-						<texturenofocus border="5" >Back.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(NoOSDInfo)</onclick>
-						<selected>Skin.HasSetting(NoOSDInfo)</selected>
-					</control>
-					<control type="radiobutton" id="105">
-						<width>970</width>
-						<height>60</height>
-						<font>font13</font>
-						<label>Disable Music Video Info Scroll</label>
-						<textcolor>unfocus</textcolor>
-						<focusedcolor>darktext</focusedcolor>
-						<texturefocus border="5" >Back2.png</texturefocus>
-						<texturenofocus border="5" >Back.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(NoMusicVidScroll)</onclick>
-						<selected>Skin.HasSetting(NoMusicVidScroll)</selected>
-					</control>					
+					</control>				
 					<control type="radiobutton" id="112">
 						<width>970</width>
 						<height>60</height>
@@ -697,6 +654,85 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(4)</visible>
 				</control>
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<left>268</left>
+					<top>80</top>
+					<width>970</width>
+					<height>540</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="radiobutton" id="102">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>31103</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Permanently Show Info In Visulisation</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(FullInfo)</onclick>
+						<selected>Skin.HasSetting(FullInfo)</selected>
+					</control>
+					<control type="radiobutton" id="104">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Disable Info with Fullscreen Video and Visualisation OSD</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(NoOSDInfo)</onclick>
+						<selected>Skin.HasSetting(NoOSDInfo)</selected>
+					</control>
+					<control type="radiobutton" id="105">
+						<width>970</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>Disable Music Video Info Scroll</label>
+						<textcolor>unfocus</textcolor>
+						<focusedcolor>darktext</focusedcolor>
+						<texturefocus border="5" >Back2.png</texturefocus>
+						<texturenofocus border="5" >Back.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(NoMusicVidScroll)</onclick>
+						<selected>Skin.HasSetting(NoMusicVidScroll)</selected>
+					</control>					
+
+				</control>
+				<control type="scrollbar" id="65">
+					<left>1240</left>
+					<top>80</top>
+					<width>20</width>
+					<height>500</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9001</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(5)</visible>
+				</control>
+
 			</control>
 		</control>
 

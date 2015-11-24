@@ -25,6 +25,7 @@
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
+
 		<control type="image">
 			<description>Section header image</description>
 			<left>-5</left>
@@ -47,6 +48,7 @@
 				<label>$LOCALIZE[8]</label>
 			</control>
 		</control>
+
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
@@ -57,10 +59,8 @@
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<include>VisibleFadeEffect</include>
-			<control type="group">
-				<left>40</left>
-				<top>80</top>
-				<control type="label">
+
+<!-- 				<control type="label">
 					<description>header label</description>
 					<left>20</left>
 					<top>15</top>
@@ -68,64 +68,18 @@
 					<height>30</height>
 					<font>font13_title</font>
 					<label>31300</label>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>text</textcolor>
 					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>55</top>
-					<width>440</width>
-					<height>46</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
-				</control>
-				<control type="label">
-					<description>Provider Text</description>
-					<left>20</left>
-					<top>60</top>
-					<width>460</width>
-					<height>35</height>
-					<font>font12</font>
-					<textcolor>text</textcolor>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$LOCALIZE[31303] : [COLOR=orange]$INFO[Window.Property(WeatherProvider)][/COLOR]</label>
-					<include>Window_OpenClose_Animation</include>
-					<visible>IsEmpty(Window.Property(WeatherProviderLogo))</visible>
-				</control>
+				</control> -->
 				<control type="group">
-					<control type="label">
-						<description>weather location label</description>
-						<left>20</left>
-						<top>100</top>
-						<width>460</width>
-						<height>30</height>
-						<font>font13_title</font>
-						<textcolor>text</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[Window.Property(Location)]</label>
-					</control>
-					<control type="label">
-						<description>update label</description>
-						<left>20</left>
-						<top>120</top>
-						<width>460</width>
-						<height>35</height>
-						<font>font12</font>
-						<label>$LOCALIZE[31301] - $INFO[Window.Property(Updated)]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>highlight</textcolor>
-					</control>
+					<left>45</left>
+					<top>90</top>
 					<control type="label">
 						<description>current temp Value</description>
-						<left>15</left>
-						<top>185</top>
+						<left>0</left>
+						<top>45</top>
 						<width>180</width>
 						<height>40</height>
 						<font>WeatherTemp</font>
@@ -137,8 +91,8 @@
 					</control>
 					<control type="label">
 						<description>current temp Value Units</description>
-						<left>200</left>
-						<top>206</top>
+						<left>185</left>
+						<top>61</top>
 						<width>100</width>
 						<height>40</height>
 						<font>font16</font>
@@ -150,38 +104,33 @@
 					</control>
 					<control type="image">
 						<description>current weather icon</description>
-						<left>260</left>
-						<top>145</top>
+						<left>245</left>
+						<top>0</top>
 						<width>200</width>
 						<height>200</height>
 						<info>Window.Property(Current.ConditionIcon)</info>
 						<aspectratio>keep</aspectratio>
 					</control>
-					<control type="label">
+				</control>
+				<control type="label">
 						<description>current condition label</description>
-						<left>20</left>
-						<top>350</top>
-						<width>460</width>
+						<left>0</left>
+						<top>250</top>
+						<width>290</width>
 						<height>30</height>
 						<info>Window.Property(Current.Condition)</info>
 						<wrapmultiline>true</wrapmultiline>
 						<font>font13</font>
-						<align>center</align>
+						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>text</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>390</top>
-					<width>460</width>
-					<height>4</height>
-					<texture>separator.png</texture>
-				</control>
+
+
 				<control type="grouplist">
-					<left>0</left>
-					<top>400</top>
+					<left>780</left>
+					<top>130</top>
 					<width>170</width>
 					<height>180</height>
 					<itemgap>0</itemgap>
@@ -271,8 +220,8 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<left>185</left>
-					<top>400</top>
+					<left>960</left>
+					<top>130</top>
 					<width>300</width>
 					<height>180</height>
 					<itemgap>0</itemgap>
@@ -361,12 +310,13 @@
 						<visible>!IsEmpty(Window.Property(Current.Wind))</visible>
 					</control>
 				</control>
+
 				<control type="group">
 					<visible>!IsEmpty(Window.Property(Today.IsFetched))</visible>
 					<control type="label">
 						<description>Sunrise Label</description>
-						<left>30</left>
-						<top>570</top>
+						<left>640</left>
+						<top>250</top>
 						<width>300</width>
 						<height>35</height>
 						<font>font13</font>
@@ -379,8 +329,8 @@
 					</control>
 					<control type="label">
 						<description>Sunset label</description>
-						<left>170</left>
-						<top>570</top>
+						<left>940</left>
+						<top>250</top>
 						<width>300</width>
 						<height>35</height>
 						<font>font13</font>
@@ -392,10 +342,17 @@
 						<visible>!IsEmpty(Window.Property(Today.Sunset))</visible>
 					</control>
 				</control>
-			</control>
-			<control type="group">
-				<left>580</left>
-				<top>40</top>
+
+				<control type="image">
+					<left>20</left>
+					<top>300</top>
+					<width>1280</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+ 			<control type="group">
+				<left>20</left>
+				<top>310</top>
 				<control type="group" id="50">
 					<include>WeatherDaily</include>
 					<include>Weather36Hour</include>
@@ -404,7 +361,43 @@
 					<include>WeatherMaps</include>
 					<include>WeatherAlerts</include>
 				</control>
-			</control>
+			</control> 
+							<control type="image">
+					<left>460r</left>
+					<top>160r</top>
+					<width>440</width>
+					<height>50</height>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
+				</control>
+				<control type="label">
+					<description>Provider Text</description>
+					<left>460r</left>
+					<top>160r</top>
+					<width>440</width>
+					<height>50</height>
+					<font>font12</font>
+					<textcolor>text</textcolor>
+					<scroll>true</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31303] : [COLOR=orange]$INFO[Window.Property(WeatherProvider)][/COLOR]</label>
+					<include>Window_OpenClose_Animation</include>
+					<visible>IsEmpty(Window.Property(WeatherProviderLogo))</visible>
+				</control>
+				<control type="label">
+					<description>weather location label</description>
+					<left>25</left>
+					<top>140r</top>
+					<width>700</width>
+					<height>30</height>
+					<font>font13_title</font>
+					<textcolor>text</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<label>$INFO[Window.Property(Location)] - $LOCALIZE[31301] - $INFO[Window.Property(Updated)]</label>
+				</control>
+
 		</control>
 		<control type="group">
 			<left>-250</left>
